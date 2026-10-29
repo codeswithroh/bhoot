@@ -20,12 +20,13 @@ export interface Facts {
   goneYear: number;
   makers: string[]; // who wrote it / who it was (lowercase)
   breaker: string; // who deleted it (graves), lowercase
+  activeYears?: number; // ghosts: how long they contributed (silent years are in counts)
 }
 
 export type Unit = 'lines' | 'commits' | 'years' | 'files' | 'people' | 'days';
 const UNITS: [RegExp, Unit][] = [
   [/^lines?$/, 'lines'],
-  [/^(commits?|changes?|edits?)$/, 'commits'],
+  [/^(commits?|commitments?|changes?|edits?)$/, 'commits'],
   [/^(years?|yrs?)$/, 'years'],
   [/^files?$/, 'files'],
   [/^(people|persons?|contributors?|authors?|hands|souls|developers?|maintainers?|friends)$/, 'people'],
@@ -71,6 +72,7 @@ export function ghostFacts(p: Person, s: Survival, now: number): Facts {
     goneYear: yr(p.last),
     makers: [...p.names].map((x) => x.toLowerCase()),
     breaker: '',
+    activeYears: Math.floor(years(p.last - p.first)),
   };
 }
 
@@ -190,14 +192,35 @@ const toNumber = (t: string): number | null => {
   return wordsToNumber(t);
 };
 
+/** For facts saved before activeYears existed: work it out from the first and last commit lines. */
+function activeFromLines(f: Facts): number | undefined {
+  if (f.kind !== 'ghost') return undefined;
+  const d = (k: string) => f.lines.find((l) => l.startsWith(k))?.match(/\d{4}-\d{2}-\d{2}/)?.[0];
+  const a = d('first commit');
+  const b = d('last commit');
+  return a && b ? Math.floor(years(Date.parse(b) - Date.parse(a))) : undefined;
+}
+
 /** A number right before a unit word must be a fact about that unit. */
 function badCount(r: string, f: Facts): string | null {
   const num = `\\d[\\d,]*|${NUMBER_PHRASE.source.replace(/^\\b|\\b$/g, '')}`;
-  const re = new RegExp(`\\b(${num})(?:[\\s-]+(?:silent|long|lonely|quiet|faithful|whole|full|more|old|of))*[\\s-]+([a-z]+)\\b`, 'gi');
+  const re = new RegExp(`\\b(${num})(?:[\\s-]+(?:silent|long|lonely|quiet|faithful|whole|full|more|old|of|brief|small|short|busy|gentle|little|final|good))*[\\s-]+([a-z]+)\\b`, 'gi');
   for (const m of r.matchAll(re)) {
     const n = toNumber(m[1]);
     const unit = UNITS.find(([u]) => u.test(m[2].toLowerCase()))?.[1];
-    if (n === null || !unit || /^(one|a)$/i.test(m[1])) continue;
+    if (n === null || /^(one|a)$/i.test(m[1])) continue;
+    if (!unit) {
+      // A count of something the facts never count ("316 paths", "nine tests", "nine brief lives").
+      const isYear = n >= 1900 && n <= 2099;
+      if (!isYear && /s$/i.test(m[2]) && !/^(is|was|its|this|has|as|us|yes|always|perhaps|towards|less|across|his|hers|ours|yours|theirs|thus|plus|whose|was)$/i.test(m[2])) return `"${m[0].trim()}"`;
+      continue;
+    }
+    // "maintained for three years" is how long they worked; "silent for three years" is how long they've been gone.
+    const active = f.activeYears ?? activeFromLines(f);
+    if (unit === 'years' && active !== undefined) {
+      const before = r.slice(Math.max(0, (m.index ?? 0) - 40), m.index).toLowerCase();
+      if (/(maintain|tend|work|serv|buil|wrote|writ|activ|contribut|labou?r|toil|craft)\w*\s+(?:\w+\s+){0,3}(?:for\s+)?$/.test(before) && n !== active) return `"${before.trim().split(/\s+/).slice(-3).join(' ')} ${m[0].trim()}"`;
+    }
     const ok = f.counts.some(([x, u]) => u === unit && (x === n || (x >= 1000 && Math.abs(x - n) / x < 0.05 && n % 100 === 0)));
     if (!ok) return `"${m[0].trim()}"`;
   }
@@ -277,7 +300,8 @@ export function unsupported(remembrance: string, f: Facts): string | null {
     words.slice(1).forEach((w) => {
       const lw = w.toLowerCase().replace(/'s$/, '');
       if (MONTHS.includes(lw)) return; // checked above, against the real dates
-      if (/^\p{Lu}/u.test(w) && !ORDINARY.has(lw) && !ok.words.has(lw) && !ok.text.includes(lw)) throw new Unsupported(`the name "${w}"`);
+      // A whole word of the facts, not a piece of one: "Sean Strom" can't be built out of "seanstrom".
+      if (/^\p{Lu}/u.test(w) && !ORDINARY.has(lw) && !ok.words.has(lw)) throw new Unsupported(`the name "${w}"`);
     });
   }
   return null;
