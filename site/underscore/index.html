@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhoot · jashkenas/underscore</title>
+<meta name="description" content="The ghosts and graves of jashkenas/underscore, read from its git history and remembered by a local Gemma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0d0b14;--night2:#17131f;--stone:#2a2633;--stone2:#3a3545;--bone:#efe6d6;--dim:#a79fb3;--marigold:#f5a524;--marigold2:#e8710a;--candle:#ffd27a}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 70% -10%,#2b2140 0,transparent 60%),var(--night);color:var(--bone);font:16px/1.6 Inter,system-ui,sans-serif}
+main{max-width:1160px;margin:0 auto;padding:56px 20px 80px}
+header{display:grid;gap:10px;margin-bottom:44px}
+.eyebrow{font-family:'Tiro Devanagari Hindi',serif;color:var(--marigold);letter-spacing:.04em;font-size:18px;margin:0}
+h1{font:700 clamp(46px,9vw,92px)/1 'Cormorant Garamond',serif;margin:0;letter-spacing:-.01em}
+h1 span{color:var(--marigold)}
+.lede{font-size:19px;color:var(--dim);max-width:760px;margin:6px 0 0}
+.lede b{color:var(--bone)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stats span{background:var(--night2);border:1px solid #2f2840;border-radius:999px;padding:6px 14px;font-size:14px;color:var(--dim)}
+.stats b{color:var(--candle)}
+h2{font:700 38px/1.1 'Cormorant Garamond',serif;margin:56px 0 6px}
+h2+p{color:var(--dim);margin:0 0 22px;max-width:760px}
+.ghosts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.ghost{position:relative;background:linear-gradient(180deg,rgba(239,230,214,.07),rgba(239,230,214,.02));border:1px solid rgba(239,230,214,.12);border-radius:20px;padding:22px 22px 18px;overflow:hidden}
+.ghost::after{content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(255,210,122,.10),transparent 70%);pointer-events:none}
+.ghost h3{font:700 28px/1.1 'Cormorant Garamond',serif;margin:0 46px 4px 0}
+.years{margin:0;color:var(--dim);font-size:14px}
+.haunt{margin:10px 0;font-size:16px}.haunt b{color:var(--candle);font-size:22px}
+blockquote{margin:12px 0;font:italic 500 20px/1.4 'Cormorant Garamond',serif;color:var(--bone)}
+.oldest{font-size:13px;color:var(--dim);margin:10px 0 12px}
+.oldest code{display:block;margin-top:4px;font:13px/1.45 'JetBrains Mono',monospace;color:#d7cce6;background:rgba(0,0,0,.3);padding:8px 10px;border-radius:8px;overflow-wrap:anywhere}
+.where{display:block;margin-top:4px;font-size:12px}
+.candle{position:absolute;top:18px;right:18px;width:30px;height:44px;border:0;background:none;cursor:pointer;padding:0}
+.candle::before{content:'';position:absolute;bottom:0;left:9px;width:12px;height:26px;border-radius:3px;background:linear-gradient(#f3ead8,#cbbfa8)}
+.flame{position:absolute;left:10px;bottom:26px;width:10px;height:14px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff6d6,var(--candle) 40%,var(--marigold2));opacity:.18;transition:opacity .4s;filter:blur(.3px)}
+.candle.lit .flame{opacity:1;animation:flicker 1.6s infinite ease-in-out}
+@keyframes flicker{50%{transform:scale(.92) rotate(-3deg) translateY(1px)}}
+.graves{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px 18px;align-items:end}
+.stone{background:linear-gradient(180deg,var(--stone2),var(--stone));border-radius:120px 120px 10px 10px;padding:30px 20px 18px;text-align:center;box-shadow:inset 0 2px 0 rgba(255,255,255,.06),0 18px 30px rgba(0,0,0,.35);border-bottom:6px solid #1c1924;position:relative}
+.stone::after{content:'';position:absolute;left:-12px;right:-12px;bottom:-16px;height:14px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(245,165,36,.25),transparent 70%)}
+.rip{margin:0;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--dim)}
+.stone h3{font:700 24px/1.15 'Cormorant Garamond',serif;margin:6px 0 2px;overflow-wrap:anywhere}
+.path{margin:0;font:12px 'JetBrains Mono',monospace;color:var(--dim);overflow-wrap:anywhere}
+.dates{margin:8px 0 0;font:700 22px 'Cormorant Garamond',serif;color:var(--marigold)}
+.lived{margin:0;font-size:12.5px;color:var(--dim)}
+.stone blockquote{font-size:18px}
+.cause{font-size:13px;margin:8px 0 4px}.cause span{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--dim)}
+.cause a{color:var(--bone);text-decoration-color:rgba(245,165,36,.5)}
+.by{font-size:12px;color:var(--dim);margin:6px 0 10px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1px solid rgba(245,165,36,.4);color:var(--marigold);cursor:help}
+.badge.facts{border-color:rgba(167,159,179,.4);color:var(--dim)}
+.family{margin-top:10px;text-align:left;font-size:12.5px;color:var(--dim)}.family summary{cursor:pointer;color:var(--marigold);text-align:center}.family ul{list-style:none;padding:0;margin:8px 0 0;max-height:220px;overflow:auto}.family li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-top:1px solid rgba(255,255,255,.06)}.family code{font-size:11.5px;overflow-wrap:anywhere}
+footer{margin-top:70px;color:var(--dim);font-size:14px;border-top:1px solid #2a2338;padding-top:20px}
+footer a{color:var(--marigold)}
+.marigolds{position:fixed;inset:auto 0 0 0;height:6px;background:repeating-linear-gradient(90deg,var(--marigold) 0 18px,var(--marigold2) 18px 36px);opacity:.75}
+@media (prefers-reduced-motion:reduce){.candle.lit .flame{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="eyebrow">भूत · bhoot · ghost, and the past</p>
+  <h1>The ghosts of <span>jashkenas/underscore</span></h1>
+  <p class="lede">People who left long ago but whose code still runs, and files that lived and died in the history. Read from git on one laptop. Remembered by <b>gemma3:4b</b>, running locally. Every name, number, date and file Gemma wrote was <b>checked against git</b> before it was carved.</p>
+  <div class="stats">
+    <span><b>12</b> ghosts still running <b>148,114</b> lines</span>
+    <span><b>4</b> graves, of 18 files that died</span>
+    <span><b>15</b> of 16 remembrances by Gemma</span>
+    <span><b>4</b> invented details caught</span>
+  </div>
+</header>
+
+<h2>Still haunting</h2>
+<p>They haven't committed in a long time. Their code didn't get the message. Light a candle.</p>
+<section class="ghosts"><article class="ghost">
+    <button class="candle" aria-label="Light a candle for Jeremy Ashkenas"><span class="flame"></span></button>
+    <h3>Jeremy Ashkenas</h3>
+    <p class="years">2009 – 2022 · silent since 2022-09-23</p>
+    <p class="haunt"><b>143,985</b> of their lines still run, in 179 files</p>
+    <blockquote>From 2009, a list persisted, silently echoing through 143,985 lines of code, a testament to Jeremy’s steady hand. Five hundred seventy-six commits shaped its quiet, enduring existence.</blockquote>
+    <p class="oldest">oldest line still here, from 2009<br><code>var list = [1, [2], [3, [[[4]]]]];</code><span class="where">test/arrays.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Jordan Eldredge"><span class="flame"></span></button>
+    <h3>Jordan Eldredge</h3>
+    <p class="years">2015 – 2018 · silent since 2018-05-10</p>
+    <p class="haunt"><b>1,249</b> of their lines still run, in 12 files</p>
+    <blockquote>Jordan Eldredge’s code, a quiet echo of 1,249 lines, still diligently tests for null within its functions and collections, born in 2015. Eight years silent, yet its persistence continues, a spectral testament to its work.</blockquote>
+    <p class="oldest">oldest line still here, from 2015<br><code>assert.deepEqual(_.flatten(null), [], &#39;supports null&#39;);</code><span class="where">test/arrays.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Graeme Yeates"><span class="flame"></span></button>
+    <h3>Graeme Yeates</h3>
+    <p class="years">2014 – 2015 · silent since 2015-10-26</p>
+    <p class="haunt"><b>864</b> of their lines still run, in 16 files</p>
+    <blockquote>Graeme’s code, born in 2014, still measures time with a persistent echo. Eight hundred sixty-four lines, across sixteen files, continue its quiet work today.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>var diff = _.now() - new Date().getTime();</code><span class="where">test/utility.js</span></p>
+    <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;145 silent years&quot;).">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Kevin Gibbons"><span class="flame"></span></button>
+    <h3>Kevin Gibbons</h3>
+    <p class="years">2015 – 2015 · silent since 2015-09-08</p>
+    <p class="haunt"><b>528</b> of their lines still run, in 7 files</p>
+    <blockquote>Kevin Gibbons’s code, a quiet echo from 2015, still diligently tests seven files, particularly within the test/objects.js, ensuring it continues to verify its mapping functions.</blockquote>
+    <p class="oldest">oldest line still here, from 2015<br><code>assert.deepEqual(_.flatten(result), [2, 3, 2, 3], &#39;works well with _.map&#39;);</code><span class="where">test/arrays.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Adam Krebs"><span class="flame"></span></button>
+    <h3>Adam Krebs</h3>
+    <p class="years">2013 – 2016 · silent since 2016-08-29</p>
+    <p class="haunt"><b>259</b> of their lines still run, in 12 files</p>
+    <blockquote>Adam Krebs’s code, silent for a decade, still diligently runs, a testament to 259 lines within twelve files, beginning with that 2013 fix. Its echoes persist, particularly in index.html.</blockquote>
+    <p class="oldest">oldest line still here, from 2013<br><code>// Objects without a `constructor` property</code><span class="where">test/objects.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Brad Dunbar"><span class="flame"></span></button>
+    <h3>Brad Dunbar</h3>
+    <p class="years">2011 – 2014 · silent since 2014-10-22</p>
+    <p class="haunt"><b>250</b> of their lines still run, in 12 files</p>
+    <blockquote>Last seen 2014-10-22. 250 of their lines still run here.</blockquote>
+    <p class="oldest">oldest line still here, from 2012<br><code>_.templateSettings = templateSettings;</code><span class="where">test/utility.js</span></p>
+    <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;127 silent years&quot;; &quot;127 years&quot;), so the stone carries plain facts.">plain facts</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Michael Ficarra"><span class="flame"></span></button>
+    <h3>Michael Ficarra</h3>
+    <p class="years">2011 – 2016 · silent since 2016-03-08</p>
+    <p class="haunt"><b>246</b> of their lines still run, in 12 files</p>
+    <blockquote>Michael Ficarra’s code, a quiet pulse of 246 lines, still echoes from 2011, a single array beginning to hold. Ten years silent, yet its legacy persists within test/objects.js.</blockquote>
+    <p class="oldest">oldest line still here, from 2011<br><code>var a = []; a[1] = 0;</code><span class="where">test/objects.js</span></p>
+    <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;twenty-four-six lines&quot;).">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for David Chambers"><span class="flame"></span></button>
+    <h3>David Chambers</h3>
+    <p class="years">2012 – 2014 · silent since 2014-05-03</p>
+    <p class="haunt"><b>201</b> of their lines still run, in 7 files</p>
+    <blockquote>David Chambers’ code, born in 2012, still quietly executes, a persistent echo of 201 lines within seven files. His &lt;tt&gt;for&lt;/tt&gt; loop endures, shaping the heart of index.html.</blockquote>
+    <p class="oldest">oldest line still here, from 2012<br><code>functions. Use a &lt;tt&gt;for&lt;/tt&gt; loop instead (or better yet, an object).</code><span class="where">index.html</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Justin Ridgewell"><span class="flame"></span></button>
+    <h3>Justin Ridgewell</h3>
+    <p class="years">2014 – 2016 · silent since 2016-03-24</p>
+    <p class="haunt"><b>184</b> of their lines still run, in 5 files</p>
+    <blockquote>Justin Ridgewell’s code, a quiet 184 lines, still answers the system’s calls, born in 2014 and persisting through ten years. Its echoes reside in underscore-umd.js, a testament to careful work.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>if (typeof Int8Array !== &#39;undefined&#39;) {</code><span class="where">test/objects.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for John-David Dalton"><span class="flame"></span></button>
+    <h3>John-David Dalton</h3>
+    <p class="years">2011 – 2016 · silent since 2016-02-29</p>
+    <p class="haunt"><b>142</b> of their lines still run, in 8 files</p>
+    <blockquote>John-David Dalton’s echoes persist, a quiet vigilance of 142 lines still dutifully alerting, born of 2011 and a silent decade. His code, a small, persistent soul, remains in CODE_OF_CONDUCT.md.</blockquote>
+    <p class="oldest">oldest line still here, from 2012<br><code>_.each([1, 2, 3], alert);</code><span class="where">index.html</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Kit Cambridge"><span class="flame"></span></button>
+    <h3>Kit Cambridge</h3>
+    <p class="years">2011 – 2012 · silent since 2012-02-21</p>
+    <p class="haunt"><b>104</b> of their lines still run, in 2 files</p>
+    <blockquote>Its echoes remain, a quiet pulse of 104 lines in test/objects.js, born of comparisons and a singular, persistent First. Kit Cambridge’s work persists, silent for fourteen years.</blockquote>
+    <p class="oldest">oldest line still here, from 2011<br><code>function First() {</code><span class="where">test/objects.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Ognjen Jevremovic"><span class="flame"></span></button>
+    <h3>Ognjen Jevremovic</h3>
+    <p class="years">2021 – 2021 · silent since 2021-03-08</p>
+    <p class="haunt"><b>102</b> of their lines still run, in 1 file</p>
+    <blockquote>Ognjen’s echoes persist, a quiet dance of 102 lines in test/functions.js, faithfully running since 2021 with its original now.</blockquote>
+    <p class="oldest">oldest line still here, from 2021<br><code>var originalNowFunc = Date.now;</code><span class="where">test/functions.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article></section>
+
+<h2>The departed</h2>
+<p>Files that were born, changed, and deleted. The cause of death is the commit that removed them.</p>
+<section class="graves"><article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="test/speed.js">speed.js</h3>
+      <p class="path">test/speed.js</p>
+      <p class="dates">2009 – 2014</p>
+      <p class="lived">lived 4 years · 81 lines · 13 commits</p>
+      <blockquote>Born in 2009, this code tested speed with jslitmus, adding 81 lines of tests in four years. Removed by Brad Dunbar in 2014, it sought to shed a jQuery dependency.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/jashkenas/underscore/commit/3eabdb8f368cb66a5e8059440db042a8e0c50426" rel="noopener">“Remove jQuery dependency.”</a></p>
+      <p class="by">born to Jeremy Ashkenas · laid to rest by Brad Dunbar</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="underscore-min.js">underscore-min.js</h3>
+      <p class="path">underscore-min.js</p>
+      <p class="dates">2009 – 2011</p>
+      <p class="lived">lived 1 year · 27 lines · 50 commits</p>
+      <blockquote>Born in 2009, Underscore-min served faithfully for a year, guided by Jeremy Ashkenas and others. Removed in 2011, its purpose shifted to the gh-pages, leaving 50 commits behind.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/jashkenas/underscore/commit/5e051fb0ed7c53fae4c4a0ffc7d4870059e2b928" rel="noopener">“from now on, to avoid confusion, underscore-min will only be in gh-pages.”</a></p>
+      <p class="by">born to Jeremy Ashkenas · laid to rest by Jeremy Ashkenas</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="README">README</h3>
+      <p class="path">README</p>
+      <p class="dates">2009 – 2012</p>
+      <p class="lived">lived 2 years · 20 lines · 13 commits</p>
+      <blockquote>Born in 2009, this utility-belt library of 20 lines offered functional support, a brief life of 13 commits, extinguished by Underscore.js 1.3.0 in January 2012.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/jashkenas/underscore/commit/dd09162b8c216f3fd09dfc85446df420962c7376" rel="noopener">“Underscore.js 1.3.0”</a></p>
+      <p class="by">born to Jeremy Ashkenas · laid to rest by Jeremy Ashkenas</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="test/temp.js">temp.js</h3>
+      <p class="path">test/temp.js</p>
+      <p class="dates">2010 – 2012</p>
+      <p class="lived">lived 2 years · 27 lines · 2 commits</p>
+      <blockquote>Born swift in January, 2010, this small script, crafted by Jeremy Ashkenas, offered tests for number detection. It ceased to be in August, 2012, a fleeting twenty-seven lines and two commits, resting now among the code.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/jashkenas/underscore/commit/a4a2e0375bcaf092b7bc84f89ca29060888e6127" rel="noopener">“removing old temp.js file”</a></p>
+      <p class="by">born to Jeremy Ashkenas · laid to rest by Jeremy Ashkenas</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article></section>
+
+<footer>Made with <a href="https://github.com/codeswithroh/bhoot">Bhoot</a> from the history at 2026-10-15. Hover a badge to see what was checked, or what was thrown out.</footer>
+</main>
+<div class="marigolds" aria-hidden="true"></div>
+<script>
+const key='bhoot-candles:jashkenas/underscore';
+let lit={};try{lit=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+document.querySelectorAll('.candle').forEach((c,i)=>{
+  if(lit[i])c.classList.add('lit');
+  c.addEventListener('click',()=>{c.classList.toggle('lit');lit[i]=c.classList.contains('lit');try{localStorage.setItem(key,JSON.stringify(lit))}catch(e){}});
+});
+</script>
+</body>
+</html>

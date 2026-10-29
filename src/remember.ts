@@ -298,7 +298,7 @@ export function unsupported(remembrance: string, f: Facts): string | null {
   for (const s of sentences) {
     const words = s.match(/[\p{L}'][\p{L}'-]*/gu) ?? [];
     words.slice(1).forEach((w) => {
-      const lw = w.toLowerCase().replace(/'s$/, '');
+      const lw = w.toLowerCase().replace(/'s?$/, ''); // "Chambers'" and "Chambers's" are Chambers (found on the held-out run)
       if (MONTHS.includes(lw)) return; // checked above, against the real dates
       // A whole word of the facts, not a piece of one: "Sean Strom" can't be built out of "seanstrom".
       if (/^\p{Lu}/u.test(w) && !ORDINARY.has(lw) && !ok.words.has(lw)) throw new Unsupported(`the name "${w}"`);

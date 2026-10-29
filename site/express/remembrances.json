@@ -1,0 +1,256 @@
+{
+ "2cdb2bf47f21772c": {
+  "text": "Douglas Christopher Wilson’s code, born in 2014, still quietly fulfills its purpose, a persistent echo within 13,569 lines. Its ancient roots, like the *update connect* line, continue to guide the system today.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "e1e17fd3c79bd410": {
+  "text": "“Initial release” still echoes, a ghost of 3,527 commits, now powering 6,483 lines within 128 files. TJ’s legacy persists.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "TJ’s spirit persists, 3,527 silent years woven into 6,483 lines of code, still running from 2009’s initial release. History.md remembers.",
+    "why": "\"3,527 silent years\""
+   }
+  ]
+ },
+ "fdd30c5412098129": {
+  "text": "His code, a quiet guardian, still answers requests from 2012, routing verbs with steadfast precision. A silent 12 years passed, yet 436 lines of his work continue to run.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "6ad076a45a4631a6": {
+  "text": "Wes Todd’s code, born in 2017, still quietly persists – 382 lines in 19 files, a testament to the `statuses` module’s embrace. His silent work, totaling 42 commits, continues to run today.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "022b46a9cc0e4840": {
+  "text": "Robert Sköld’s code, a quiet echo, still ensures acceptance tests run smoothly, a testament to 311 lines across 17 files, born on December 10th, 2011. Its silent vigil of 14 years continues, a gentle reassurance within error-pages.js.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "d02686554e0a5ee1": {
+  "text": "Jamie Barton’s spirit persists, 214 lines of ejs still echoing through nine years of code, most notably in views shaping user interactions. Their echoes live on, a quiet testament to 21 files and a singular vision.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "1018cc50278d3628": {
+  "text": "Jonathan Ong's spirit persists, a quiet echo in 196 lines of code, born in 2013 and still diligently updating connect. Twelve years silent, yet his work endures.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "8dbee5432205a736": {
+  "text": "Nine years he watched, a silent guardian of downloads, his code still diligently offering options to `res.sendFile()`. Aaron Clover’s spirit persists in one hundred fifty-two lines, a quiet echo of 2017.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "f62e15008e7e8741": {
+  "text": "Its quiet work persists, a ghost in the code, still running after twelve years of silent dedication. 119 lines of examples, born in 2014, remain within 29 files.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "“Some code cleanup” began thirteen years ago, and its 119 lines still quietly execute, rooted in examples today. A persistent echo from agchou’s 2014 work.",
+    "why": "\"thirteen years\""
+   }
+  ]
+ },
+ "2c6899dac2c5cdd3": {
+  "text": "Greg Methvin’s code, a quiet guardian, still diligently redirects, ensuring 112 lines persist after thirteen years of silent service. Its roots lie deep in test/req.subdomains.js.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "e0473aa21e2183cc": {
+  "text": "Caridy Patino’s code, born April thirteenth, still whispers its dependencies through thirteen years. A quiet, steadfast presence, it continues to guide 103 lines in four files today.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "86f8da636bd2ca12": {
+  "text": "Its quiet echoes persist, a path found in 99 lines of code, still shaping views since 2017. A steadfast guide, born in examples/auth/index.js.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "eb62a20d68433441": {
+  "text": "Born 2014-05-12, gone 2025-06-09. Lived 11 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in 2014, this guide of 246 lines, crafted by Roman, flourished for eleven years, offering clarity to 32 contributors. It rests now, silenced by Sebastian, a gentle echo of community guidance.",
+    "why": "\"32 contributors\""
+   },
+   {
+    "text": "Born in 2014, this guide of 246 lines, crafted by Roman, offered pathways for 32 contributions. It passed through many hands, fading with Sebastian on June 9th, 2025.",
+    "why": "\"32 contributions\""
+   }
+  ]
+ },
+ "9f2ad4a879e2dd82": {
+  "text": "Born in twenty-eleven, this file guided builds with many Node.js versions, now resting with eighty-four commits and a final shift to GitHub Actions, overseen by Douglas Christopher Wilson.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "0bc6f23af5721362": {
+  "text": "Born in 2010, this small file offered a simple form for uploads. It ceased to exist in May 2023, a quiet twelve years after its creation.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in July of ten, this small code breathed with multipart forms, guiding users to upload. Now silent, it rests with twenty-four commits, a thirteen-year echo of Tj Holowaychuk’s design.",
+    "why": "\"thirteen-year\""
+   }
+  ]
+ },
+ "6053f7d9a6834691": {
+  "text": "Born in 2011, this router guided paths with 627 lines of code, a legacy of Tj and Douglas. It rests now, a silent 132 commits fading into the vastness of 2015.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "ce0f87ee5ea26831": {
+  "text": "Born in 2010, this small executable, crafted by visionmedia, offered 424 lines of code and served its purpose for three years. It ceased to be in January of 2014, a silent removal by Jonathan Ong, leaving behind 153 commits and the echoes of many contributors.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "d49f630a22f424b4": {
+  "text": "Born in 2014, this guide, crafted by Roman, offered pathways for contributions, existing for eleven years and totaling 52 lines of code. It rests now, removed by Sebastian, alongside its 11 commits and the efforts of many.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "8d7522c123850caa": {
+  "text": "Born in the heart of 2016, this guide offered pathways to Express releases for nine years. Lost to a fix in 2025, its 203 lines of wisdom now rest amongst the discussions and charters.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "abe003e8bc462b63": {
+  "text": "Born in 2015, this document guided the Express project’s security for nine years, lost on June 13th, 2025, by Ulises Gascon. Its 57 lines of policy offered guidance to many, seeking a safer path.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in eleven-teenth, this document of fifty-seven lines guided the Express project for nine years. Lost by Ulises, its purpose – safeguarding security – echoes still among fifteen collaborators.",
+    "why": "\"fifteen collaborators\""
+   }
+  ]
+ },
+ "5cde5d9cec28ed5d": {
+  "text": "Born in July 2010, this jade example offered six years of service, rendered 53 lines of code and 27 commits. Removed by Jamie Barton in February 2017, it rests peacefully amongst the project’s history.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "78d993ca28a8a06d": {
+  "text": "Born in 2011, this Route, crafted by Tj, navigated paths for four years, ultimately silenced by a need for a newer router. It rests now, 211 lines of code, alongside its creators.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "9b3133cacd1e0e82": {
+  "text": "Born in November 2009, this Makefile diligently ran tests and coverage, a quiet 35 lines of code touched by many hands. It rests now, lost on May 18th, 2014, a final 97 commits marking its brief, useful life.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "7e9f847088206dcc": {
+  "text": "Born in 2013, this middleware echoed “Hello World” for twelve years, guided by TJ Holowaychuk, before being gently laid to rest in 2026.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in 2013, this middleware diligently served \"Hello World\" for twelve years, a quiet echo of thirteen benchmarks. Removed in 2026, its brief life of four commits rests peacefully now.",
+    "why": "\"thirteen benchmarks\""
+   }
+  ]
+ },
+ "ce87c54ff07c0294": {
+  "text": "Here lies the guide, born July 13, 2010, and crafted by Tj. It breathed for a year, offering 1,366 lines of instruction, before being gently silenced on April 16, 2012.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "e8e3b0ab01110ca8": {
+  "text": "Born in July 2010, this document, crafted by Tj Holowaychuk, offered a luminous guide, fading from existence in April 2012 with 1,808 lines of code and a final, quiet removal.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "bf1175ce1678bc31": {
+  "text": "Born in 2010, this small server test, crafted by visionmedia, offered a brief echo of an upload example. It ceased to be on November 8th, a quiet removal by Tj Holowaychuk, leaving behind 425 lines and 79 commits.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "7a4b9f456320765c": {
+  "text": "Born in July, this small server test, crafted by Tj, rendered paths with eager precision. It breathed for a year, extinguished by Tj in November, leaving 1,057 lines and 137 commits behind.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "dacb2309861d47be": {
+  "text": "Born in July, this view module served faithfully for a year, offering 279 lines of code and 131 commits. It rests now, updated with Connect, alongside visionmedia and Tj Holowaychuk.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "34adea227a34c50e": {
+  "text": "Born in July, this document of 394 lines, crafted by Tj Holowaychuk, illuminated Express with its styling and jQuery. It faded away in April, a gentle removal by Tj, returning to the quiet of the digital earth.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "67077835e102ad8b": {
+  "text": "Born in 2010, this small stream of tests, crafted by Tj, offered JSON responses for a year before its quiet removal in 2011. Its 770 lines and 103 commits now rest peacefully.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "8114f61ad589be2a": {
+  "text": "Born in July 2010, this small document, crafted by Tj Holowaychuk, offered 266 lines of styling and a touch of jQuery. It rested peacefully until April 16th, 2012, when it was gently laid to rest by Tj.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "f75b2daf4fb0a858": {
+  "text": "Born in the last days of 2019, this document guided the Express project for five years, offering clarity on its purpose and structure. Lost on June 9th, 2025, its 93 lines of code served as a beacon for transparency and collaboration.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "a1eb07038fda958c": {
+  "text": "Born in 2010, this small file, crafted by Tj Holowaychuk, offered a ghostly glimpse of Express’s design with 224 lines and 55 commits. It faded from existence in 2012, a quiet return to the earth.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "269bb53622fe5b3e": {
+  "text": "Born in December 2019, this guide of seventy-two lines offered clarity on issue triage, a gentle presence for five years. It rests now, a final commit by Sebastian Beltran marking its quiet passing.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "a1b7cb51c9dba815": {
+  "text": "Born in 2012, this small code breathed with 65 lines and five commits, exposing data to the client. It rests now, removed in 2017 by Douglas Christopher Wilson, a quiet echo of TJ Holowaychuk’s example.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "fdf97ad8725eab9e": {
+  "text": "Born in 2010, this document of 240 lines, crafted by Tj Holowaychuk, offered a digital tile. It faded from existence in 2012, a quiet end after 42 commits.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in 2010, this document, crafted by Tj, offered a glimpse of Express’s design, vanishing in 2012 with forty-two commits. Its brief life, forty lines in size, was a quiet contribution.",
+    "why": "\"forty lines\""
+   }
+  ]
+ },
+ "d98e52be9468be22": {
+  "text": "Born in 2010, this document of 246 lines, crafted by Tj Holowaychuk, offered a vibrant visual experience. It ceased to be in April 2012, a quiet return to the digital earth.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "d8687966317a0e26": {
+  "text": "Born in 2010, this document of 216 lines, crafted by Tj Holowaychuk, offered a shimmering, tiled view of Express. It faded with the “removed old docs” commit on April 16th, 2012, returning to the earth after one year.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "21e4a88f264a05ae": {
+  "text": "Born on November 11th, 2011, this small code breathed life into request parameters. Lost on July 7th, 2015, it rests now, a 62-line echo of tests and three years.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born November 11th, 2011, this small code breathed tests for request parameters. Lost on July 7th, 2015, it rests with 62 lines and eight lives, remembered by many.",
+    "why": "\"eight lives\""
+   }
+  ]
+ },
+ "e1365fb446f268f3": {
+  "text": "Born in 2011, this small code breathed with ten commits, offering simple greetings and a JSON response. Lost in November, it rests now, a quiet 67 lines alongside Tj Holowaychuk’s design.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "9f43f428fb50cbea": {
+  "text": "Born in June 2012, this code, crafted by TJ, diligently employed pbkdf2 for password hashing. It rests now, a 49-line echo, lost on February 16th, 2017.",
+  "by": "gemma",
+  "rejected": []
+ }
+}

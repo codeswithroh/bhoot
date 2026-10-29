@@ -11,7 +11,7 @@ Bhoot reads a repository's git history on your own laptop and finds both:
 
 A local Gemma writes each of them a two-sentence remembrance, in the spirit of Día de los Muertos. Then code checks every name, number, date and file in those words against git, and throws away anything Gemma made up.
 
-**Graveyards:** [expressjs/express](https://bhoot.vercel.app/express/) · [request/request](https://bhoot.vercel.app/request/)
+**Graveyards:** [expressjs/express](https://bhoot-graveyard.vercel.app/express) · [request/request](https://bhoot-graveyard.vercel.app/request) · [jashkenas/underscore](https://bhoot-graveyard.vercel.app/underscore)
 
 ## Run it on your repo
 
@@ -46,7 +46,16 @@ The checker exists because of what Gemma actually wrote. On the first Express ru
 
 ## Numbers
 
-See `eval/` for every attempt Gemma made, hand-labelled, and how the checker did on them.
+I labelled every first attempt Gemma made by hand: true, or saying something git contradicts (including a real number attached to the wrong thing). Labels are in `eval/labels.json`; `node eval/score.ts eval/*-v1.json eval/underscore-heldout.json` re-scores the checker on them.
+
+| | Gemma's first attempts that were false | Caught by the checker | True attempts wrongly rejected |
+|---|---|---|---|
+| express + request (the checker was tuned on these) | 22 / 78 | 22 / 22 | 0 / 56 |
+| **underscore (held out: checker frozen at `e2f3d9a` before it ran)** | **3 / 16** | **3 / 3** | **1 / 13** |
+
+The one false alarm on the held-out repo was a bug: "David Chambers' code" was rejected because the possessive apostrophe wasn't stripped before the name lookup. Gemma's retry was true, so nothing wrong was carved, and the bug is fixed (with a test) after the run.
+
+The most common invention wasn't a made-up number. It was a real one, attached to the wrong thing: commits counted as "silent years" (TJ Holowaychuk's 3,527, Graeme Yeates's 145, Brad Dunbar's 127), as "contributors", as "tests", as "brief lives".
 
 ## Credits
 

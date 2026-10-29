@@ -11,7 +11,8 @@ for (const file of process.argv.slice(2)) {
   const lab = labels[y.repo];
   for (const s of [...y.ghosts, ...y.graves]) {
     const first = s.remembrance.rejected[0]?.text ?? s.remembrance.text;
-    const truth = lab.first[s.facts.title];
+    const nfc = (t: string) => t.normalize('NFC');
+    const truth = Object.entries(lab.first).find(([k]) => nfc(k) === nfc(s.facts.title))?.[1] as boolean | undefined;
     if (truth === undefined) continue;
     const why = first.split(/\s+/).length > 55 ? 'too long' : check(first, s.facts);
     if (!truth && why) tp++;

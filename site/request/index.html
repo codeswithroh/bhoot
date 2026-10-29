@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhoot · request/request</title>
+<meta name="description" content="The ghosts and graves of request/request, read from its git history and remembered by a local Gemma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0d0b14;--night2:#17131f;--stone:#2a2633;--stone2:#3a3545;--bone:#efe6d6;--dim:#a79fb3;--marigold:#f5a524;--marigold2:#e8710a;--candle:#ffd27a}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 70% -10%,#2b2140 0,transparent 60%),var(--night);color:var(--bone);font:16px/1.6 Inter,system-ui,sans-serif}
+main{max-width:1160px;margin:0 auto;padding:56px 20px 80px}
+header{display:grid;gap:10px;margin-bottom:44px}
+.eyebrow{font-family:'Tiro Devanagari Hindi',serif;color:var(--marigold);letter-spacing:.04em;font-size:18px;margin:0}
+h1{font:700 clamp(46px,9vw,92px)/1 'Cormorant Garamond',serif;margin:0;letter-spacing:-.01em}
+h1 span{color:var(--marigold)}
+.lede{font-size:19px;color:var(--dim);max-width:760px;margin:6px 0 0}
+.lede b{color:var(--bone)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stats span{background:var(--night2);border:1px solid #2f2840;border-radius:999px;padding:6px 14px;font-size:14px;color:var(--dim)}
+.stats b{color:var(--candle)}
+h2{font:700 38px/1.1 'Cormorant Garamond',serif;margin:56px 0 6px}
+h2+p{color:var(--dim);margin:0 0 22px;max-width:760px}
+.ghosts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.ghost{position:relative;background:linear-gradient(180deg,rgba(239,230,214,.07),rgba(239,230,214,.02));border:1px solid rgba(239,230,214,.12);border-radius:20px;padding:22px 22px 18px;overflow:hidden}
+.ghost::after{content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(255,210,122,.10),transparent 70%);pointer-events:none}
+.ghost h3{font:700 28px/1.1 'Cormorant Garamond',serif;margin:0 46px 4px 0}
+.years{margin:0;color:var(--dim);font-size:14px}
+.haunt{margin:10px 0;font-size:16px}.haunt b{color:var(--candle);font-size:22px}
+blockquote{margin:12px 0;font:italic 500 20px/1.4 'Cormorant Garamond',serif;color:var(--bone)}
+.oldest{font-size:13px;color:var(--dim);margin:10px 0 12px}
+.oldest code{display:block;margin-top:4px;font:13px/1.45 'JetBrains Mono',monospace;color:#d7cce6;background:rgba(0,0,0,.3);padding:8px 10px;border-radius:8px;overflow-wrap:anywhere}
+.where{display:block;margin-top:4px;font-size:12px}
+.candle{position:absolute;top:18px;right:18px;width:30px;height:44px;border:0;background:none;cursor:pointer;padding:0}
+.candle::before{content:'';position:absolute;bottom:0;left:9px;width:12px;height:26px;border-radius:3px;background:linear-gradient(#f3ead8,#cbbfa8)}
+.flame{position:absolute;left:10px;bottom:26px;width:10px;height:14px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff6d6,var(--candle) 40%,var(--marigold2));opacity:.18;transition:opacity .4s;filter:blur(.3px)}
+.candle.lit .flame{opacity:1;animation:flicker 1.6s infinite ease-in-out}
+@keyframes flicker{50%{transform:scale(.92) rotate(-3deg) translateY(1px)}}
+.graves{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px 18px;align-items:end}
+.stone{background:linear-gradient(180deg,var(--stone2),var(--stone));border-radius:120px 120px 10px 10px;padding:30px 20px 18px;text-align:center;box-shadow:inset 0 2px 0 rgba(255,255,255,.06),0 18px 30px rgba(0,0,0,.35);border-bottom:6px solid #1c1924;position:relative}
+.stone::after{content:'';position:absolute;left:-12px;right:-12px;bottom:-16px;height:14px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(245,165,36,.25),transparent 70%)}
+.rip{margin:0;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--dim)}
+.stone h3{font:700 24px/1.15 'Cormorant Garamond',serif;margin:6px 0 2px;overflow-wrap:anywhere}
+.path{margin:0;font:12px 'JetBrains Mono',monospace;color:var(--dim);overflow-wrap:anywhere}
+.dates{margin:8px 0 0;font:700 22px 'Cormorant Garamond',serif;color:var(--marigold)}
+.lived{margin:0;font-size:12.5px;color:var(--dim)}
+.stone blockquote{font-size:18px}
+.cause{font-size:13px;margin:8px 0 4px}.cause span{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--dim)}
+.cause a{color:var(--bone);text-decoration-color:rgba(245,165,36,.5)}
+.by{font-size:12px;color:var(--dim);margin:6px 0 10px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1px solid rgba(245,165,36,.4);color:var(--marigold);cursor:help}
+.badge.facts{border-color:rgba(167,159,179,.4);color:var(--dim)}
+.family{margin-top:10px;text-align:left;font-size:12.5px;color:var(--dim)}.family summary{cursor:pointer;color:var(--marigold);text-align:center}.family ul{list-style:none;padding:0;margin:8px 0 0;max-height:220px;overflow:auto}.family li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-top:1px solid rgba(255,255,255,.06)}.family code{font-size:11.5px;overflow-wrap:anywhere}
+footer{margin-top:70px;color:var(--dim);font-size:14px;border-top:1px solid #2a2338;padding-top:20px}
+footer a{color:var(--marigold)}
+.marigolds{position:fixed;inset:auto 0 0 0;height:6px;background:repeating-linear-gradient(90deg,var(--marigold) 0 18px,var(--marigold2) 18px 36px);opacity:.75}
+@media (prefers-reduced-motion:reduce){.candle.lit .flame{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="eyebrow">भूत · bhoot · ghost, and the past</p>
+  <h1>The ghosts of <span>request/request</span></h1>
+  <p class="lede">People who left long ago but whose code still runs, and files that lived and died in the history. Read from git on one laptop. Remembered by <b>gemma3:4b</b>, running locally. Every name, number, date and file Gemma wrote was <b>checked against git</b> before it was carved.</p>
+  <div class="stats">
+    <span><b>12</b> ghosts still running <b>10,943</b> lines</span>
+    <span><b>24</b> graves, of 50 files that died</span>
+    <span><b>25</b> of 36 remembrances by Gemma</span>
+    <span><b>27</b> invented details caught</span>
+  </div>
+</header>
+
+<h2>Still haunting</h2>
+<p>They haven't committed in a long time. Their code didn't get the message. Light a candle.</p>
+<section class="ghosts"><article class="ghost">
+    <button class="candle" aria-label="Light a candle for James Nylen"><span class="flame"></span></button>
+    <h3>James Nylen</h3>
+    <p class="years">2012 – 2015 · silent since 2015-02-13</p>
+    <p class="haunt"><b>3,922</b> of their lines still run, in 62 files</p>
+    <blockquote>James Nylen’s code, a steadfast guardian, still diligently tests connections for four years, a silent watch from 2012 to 2015. Its 3,922 lines, rooted in tests, continue to run.</blockquote>
+    <p class="oldest">oldest line still here, from 2013<br><code>var assert = require(&#39;assert&#39;)</code><span class="where">tests/test-basic-auth.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for simov"><span class="flame"></span></button>
+    <h3>simov</h3>
+    <p class="years">2014 – 2018 · silent since 2018-08-02</p>
+    <p class="haunt"><b>3,000</b> of their lines still run, in 58 files</p>
+    <blockquote>Last seen 2018-08-02. 3,000 of their lines still run here.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>var http = require(&#39;http&#39;)</code><span class="where">tests/test-multipart.js</span></p>
+    <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;thousand lines&quot;; &quot;thousand lines&quot;), so the stone carries plain facts.">plain facts</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Ahmad Nassri"><span class="flame"></span></button>
+    <h3>Ahmad Nassri</h3>
+    <p class="years">2015 – 2017 · silent since 2017-03-17</p>
+    <p class="haunt"><b>1,381</b> of their lines still run, in 73 files</p>
+    <blockquote>Ahmad&#39;s code, born in 2015, still diligently tests the HTTP Archive, a silent guardian now running 1,381 lines. Its spirit persists, echoing through tests and har.js.</blockquote>
+    <p class="oldest">oldest line still here, from 2015<br><code>var fs = require(&#39;fs&#39;)</code><span class="where">lib/har.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Brian White"><span class="flame"></span></button>
+    <h3>Brian White</h3>
+    <p class="years">2012 – 2016 · silent since 2016-11-03</p>
+    <p class="haunt"><b>519</b> of their lines still run, in 55 files</p>
+    <blockquote>Last seen 2016-11-03. 519 of their lines still run here.</blockquote>
+    <p class="oldest">oldest line still here, from 2016<br><code>// packet. StackOverflow suggests these hosts:</code><span class="where">tests/test-timeout.js</span></p>
+    <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;quietly maintained for three years&quot;; &quot;fifteen years&quot;), so the stone carries plain facts.">plain facts</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for João Jerónimo"><span class="flame"></span></button>
+    <h3>João Jerónimo</h3>
+    <p class="years">2013 – 2014 · silent since 2014-01-20</p>
+    <p class="haunt"><b>435</b> of their lines still run, in 1 file</p>
+    <blockquote>João Jerónimo’s “put Request out” continues, a quiet 435 lines in request.js, born in 2013 and still running after six years.</blockquote>
+    <p class="oldest">oldest line still here, from 2013<br><code>var globalPool = {}</code><span class="where">request.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for seanstrom"><span class="flame"></span></button>
+    <h3>seanstrom</h3>
+    <p class="years">2014 – 2015 · silent since 2015-05-12</p>
+    <p class="haunt"><b>298</b> of their lines still run, in 11 files</p>
+    <blockquote>Last seen 2015-05-12. 298 of their lines still run here.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>throw new Error(&#39;undefined is not a valid uri or options object.&#39;)</code><span class="where">index.js</span></p>
+    <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;Twenty-nine-eight lines&quot;; the name &quot;Sean&quot;), so the stone carries plain facts.">plain facts</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Francis Gulotta"><span class="flame"></span></button>
+    <h3>Francis Gulotta</h3>
+    <p class="years">2018 – 2018 · silent since 2018-12-24</p>
+    <p class="haunt"><b>283</b> of their lines still run, in 20 files</p>
+    <blockquote>Francis Gulotta’s watchful code, born on November 22nd, still quietly monitors tests for a year, now 283 lines strong. Its presence persists in the keys, a silent guardian.</blockquote>
+    <p class="oldest">oldest line still here, from 2018<br><code># Number of days of inactivity before an issue becomes stale</code><span class="where">.github/stale.yml</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Isaac Z. Schlueter"><span class="flame"></span></button>
+    <h3>Isaac Z. Schlueter</h3>
+    <p class="years">2011 – 2014 · silent since 2014-09-04</p>
+    <p class="haunt"><b>269</b> of their lines still run, in 20 files</p>
+    <blockquote>His echoes linger, a silent 269 lines still shaping the squid tests, born in 2011 and faithfully running. Isaac Z. Schlueter’s dedication, carved in 31 commits, continues to guide the proxy.</blockquote>
+    <p class="oldest">oldest line still here, from 2011<br><code>exports.createChunkResponse = function (chunks, contentType) {</code><span class="where">tests/server.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Eran Hammer"><span class="flame"></span></button>
+    <h3>Eran Hammer</h3>
+    <p class="years">2013 – 2018 · silent since 2018-05-19</p>
+    <p class="haunt"><b>240</b> of their lines still run, in 3 files</p>
+    <blockquote>Eran Hammer’s code, a quiet guardian, still diligently tests the hawk, 240 lines of it, born in 2013 and persisting today. Its watchful presence, rooted in crypto, echoes from the silent year.</blockquote>
+    <p class="oldest">oldest line still here, from 2018<br><code>var crypto = require(&#39;crypto&#39;)</code><span class="where">lib/hawk.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Kevin Locke"><span class="flame"></span></button>
+    <h3>Kevin Locke</h3>
+    <p class="years">2014 – 2015 · silent since 2015-05-08</p>
+    <p class="haunt"><b>231</b> of their lines still run, in 5 files</p>
+    <blockquote>Its echoes linger, 231 lines of code still breathing in tests/test-gzip.js, a quiet vigil begun June 30th, 2014.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>if (self.gzip &amp;&amp; !self.hasHeader(&#39;accept-encoding&#39;)) {</code><span class="where">request.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Nic Jansma"><span class="flame"></span></button>
+    <h3>Nic Jansma</h3>
+    <p class="years">2016 – 2017 · silent since 2017-03-16</p>
+    <p class="haunt"><b>183</b> of their lines still run, in 3 files</p>
+    <blockquote>His timing echoes still, measuring TCP connections with 183 lines of code, born in 2016 and persisting today. A quiet contribution, faithfully running from README.md.</blockquote>
+    <p class="oldest">oldest line still here, from 2016<br><code>- `tcp`: Duration of TCP connection (`timings.connect` - `timings.socket`)</code><span class="where">README.md</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Michael Matuzak"><span class="flame"></span></button>
+    <h3>Michael Matuzak</h3>
+    <p class="years">2013 – 2014 · silent since 2014-10-13</p>
+    <p class="haunt"><b>182</b> of their lines still run, in 4 files</p>
+    <blockquote>Michael Matuzak’s code, a quiet guardian, still diligently manages requests and cookies, born in 2013 and persisting through five years. Its 182 lines, mostly in request.js, continue their work today.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>if (typeof uri === &#39;undefined&#39;) {</code><span class="where">index.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article></section>
+
+<h2>The departed</h2>
+<p>Files that were born, changed, and deleted. The cause of death is the commit that removed them.</p>
+<section class="graves"><article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="Request.js">Request.js</h3>
+      <p class="path">Request.js</p>
+      <p class="dates">2010 – 2013</p>
+      <p class="lived">lived 3 years · 1,228 lines · 316 commits</p>
+      <blockquote>Born 2010-05-07, gone 2013-08-07. Lived 3 years.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/920f9b88f7dd8f8d153e72371b1bf2d16d5e4160" rel="noopener">“rename Request”</a></p>
+      <p class="by">born to Mikeal Rogers · laid to rest by João Jerónimo</p>
+      <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;316 paths&quot;; &quot;thousand requests&quot;), so the stone carries plain facts.">plain facts</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="tests/test-https-strict.js">test-https-strict.js</h3>
+      <p class="path">tests/test-https-strict.js</p>
+      <p class="dates">2011 – 2014</p>
+      <p class="lived">lived 3 years · 105 lines · 19 commits</p>
+      <blockquote>Born in 2011, this code validated signatures, a testament to Better tests. It ceased to exist in 2014, consumed by the need for consolidation.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/32d4a2d19811002af046d2c8bc11d97fedd09d0f" rel="noopener">“Fold tests/test-https-strict.js into tests/test-https.js”</a></p>
+      <p class="by">born to Mikeal Rogers · laid to rest by James Nylen</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="tests/run.js">run.js</h3>
+      <p class="path">tests/run.js</p>
+      <p class="dates">2012 – 2014</p>
+      <p class="lived">lived 2 years · 47 lines · 14 commits</p>
+      <blockquote>Born in February, this small runner executed tests with care, a fleeting presence of forty-seven lines. It vanished in October, seeking a more robust method, its purpose now a silent echo.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/9522e871cc0f410087276ae7de7de18c50f8e026" rel="noopener">“Use a real test runner”</a></p>
+      <p class="by">born to Chris Sainty · laid to rest by James Nylen</p>
+      <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;fifteen lines&quot;).">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="tests/test-proxy-no_proxy-env-case-insensitive.js">test-proxy-no_proxy-env-case-insensitive.js</h3>
+      <p class="path">tests/test-proxy-no_proxy-env-case-insensitive.js</p>
+      <p class="dates">2011 – 2014</p>
+      <p class="lived">lived 2 years · 43 lines · 10 commits</p>
+      <blockquote>Born in eleven, it tested proxy options with care. Lost to a merge, its forty-three lines now rest alongside its two years of service.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed" rel="noopener">“Merge all proxy tests into tests/test-proxy.js”</a></p>
+      <p class="by">born to Dominic Tarr · laid to rest by James Nylen</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      <details class="family"><summary>family plot · 15 more laid to rest by the same commit</summary><ul><li><code>tests/test-proxy-no_proxy-env-sub-port.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-sub.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-lowercase.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-multiple.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-multiple2.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-port-implicit.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-port.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-subdomain.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-star.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-auth-no-uri-auth.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-uri-auth-no-proxy-auth.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-no_proxy-env-ignored.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-null.js</code> <span>2011 – 2014</span></li><li><code>tests/test-proxy-env.js</code> <span>2011 – 2014</span></li></ul></details>
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title=".eslintrc">.eslintrc</h3>
+      <p class="path">.eslintrc</p>
+      <p class="dates">2014 – 2017</p>
+      <p class="lived">lived 2 years · 46 lines · 10 commits</p>
+      <blockquote>Born in 2014, this small guardian diligently enforced code style for two years, overseen by many. It rested peacefully, a 46-line guide, until its refactoring in 2017.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/b12a6245d9acdb1e13c6486d427801e123fdafae" rel="noopener">“refactor(lint): replace eslint with standard (#2579)”</a></p>
+      <p class="by">born to FredKSchott · laid to rest by Ahmad Nassri</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="tests/test-protocol-changing-redirect.js">test-protocol-changing-redirect.js</h3>
+      <p class="path">tests/test-protocol-changing-redirect.js</p>
+      <p class="dates">2012 – 2014</p>
+      <p class="lived">lived 2 years · 62 lines · 3 commits</p>
+      <blockquote>Born in 2012, this test faithfully redirected protocols with 62 lines of code, guided by Isaacs and others. It ceased to exist in 2014, a rewrite by James Nylen bringing its two-year life to a quiet end.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/6dd97eaf0e135f1a673d6fad7e80052424ee60fe" rel="noopener">“Rewrite tests/test-protocol-changing-redirect.js to use tape”</a></p>
+      <p class="by">born to isaacs · laid to rest by James Nylen</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="oauth.js">oauth.js</h3>
+      <p class="path">oauth.js</p>
+      <p class="dates">2011 – 2013</p>
+      <p class="lived">lived 1 year · 44 lines · 12 commits</p>
+      <blockquote>Born in 2011, this code crafted signatures for Twitter, a year spent diligently. Now returned to the earth, its purpose fulfilled by a newer, unified library.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/fbed7234d7b532813105efdc4c54777396a6773b" rel="noopener">“OAuth signing is now in its own library.”</a></p>
+      <p class="by">born to Mikeal Rogers · laid to rest by Mikeal Rogers</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="forever.js">forever.js</h3>
+      <p class="path">forever.js</p>
+      <p class="dates">2011 – 2013</p>
+      <p class="lived">lived 1 year · 104 lines · 6 commits</p>
+      <blockquote>Born in the winter of 2011, this agent diligently managed connections, a quiet worker of 104 lines. It ceased to exist on March 1st, 2013, now a memory alongside its six commits.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/ef5ab90277fb00d0e8eb1c565b0f6ef8c52601d3" rel="noopener">“Forever agent is now it&#39;s own package.”</a></p>
+      <p class="by">born to Jann Horn · laid to rest by Mikeal Rogers</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="uuid.js">uuid.js</h3>
+      <p class="path">uuid.js</p>
+      <p class="dates">2011 – 2013</p>
+      <p class="lived">lived 1 year · 20 lines · 5 commits</p>
+      <blockquote>Born 2011-11-12, gone 2013-03-01. Lived 1 year.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/request/request/commit/67d753fec99fa1f5a3b35ec0bbbc98896418d86c" rel="noopener">“node-uuid is much better.”</a></p>
+      <p class="by">born to Mikeal Rogers · laid to rest by Mikeal Rogers</p>
+      <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;eleven-eleven&quot;; &quot;fifteen lives&quot;), so the stone carries plain facts.">plain facts</span>
+      
+    </div>
+  </article></section>
+
+<footer>Made with <a href="https://github.com/codeswithroh/bhoot">Bhoot</a> from the history at 2020-02-11. Hover a badge to see what was checked, or what was thrown out.</footer>
+</main>
+<div class="marigolds" aria-hidden="true"></div>
+<script>
+const key='bhoot-candles:request/request';
+let lit={};try{lit=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+document.querySelectorAll('.candle').forEach((c,i)=>{
+  if(lit[i])c.classList.add('lit');
+  c.addEventListener('click',()=>{c.classList.toggle('lit');lit[i]=c.classList.contains('lit');try{localStorage.setItem(key,JSON.stringify(lit))}catch(e){}});
+});
+</script>
+</body>
+</html>

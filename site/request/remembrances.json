@@ -1,0 +1,306 @@
+{
+ "66d2f5e0511b4ff6": {
+  "text": "James Nylen’s code, a steadfast guardian, still diligently tests connections for four years, a silent watch from 2012 to 2015. Its 3,922 lines, rooted in tests, continue to run.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b03184b9b9036e1f": {
+  "text": "Last seen 2018-08-02. 3,000 of their lines still run here.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "From 2014, its echoes persist; a thousand lines still hum, testing multipart bodies with tireless grace, born of 259 commits.",
+    "why": "\"thousand lines\""
+   },
+   {
+    "text": "From 2014, its echoes persist, a thousand lines still dutifully handle multipart bodies. The spirit of simov lives on, woven through README.md and tunnel.js.",
+    "why": "\"thousand lines\""
+   }
+  ]
+ },
+ "db474233808a10c9": {
+  "text": "Ahmad's code, born in 2015, still diligently tests the HTTP Archive, a silent guardian now running 1,381 lines. Its spirit persists, echoing through tests and har.js.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "013803c36b434a5a": {
+  "text": "Last seen 2016-11-03. 519 of their lines still run here.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Brian White's echoes persist, 519 lines of tests still running, born in 2012 and quietly maintained for three years. His code, particularly within tests/test-timeout.js, continues its watchful vigil.",
+    "why": "\"quietly maintained for three years\""
+   },
+   {
+    "text": "His echoes linger, a persistent pulse of 519 lines in tests/test-timeout.js, born of 2012 and still running today. Brian White’s code continues, a quiet testament to fifteen years of work.",
+    "why": "\"fifteen years\""
+   }
+  ]
+ },
+ "a07446c6503830d7": {
+  "text": "João Jerónimo’s “put Request out” continues, a quiet 435 lines in request.js, born in 2013 and still running after six years.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "ea0d9c6ac21c30d6": {
+  "text": "Last seen 2015-05-12. 298 of their lines still run here.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Its work, a quiet sentinel, persists. Twenty-nine-eight lines, born in 2014, still guide the request.",
+    "why": "\"Twenty-nine-eight lines\""
+   },
+   {
+    "text": "Here lies Sean Strom, whose diligent code still guides the system, a watchful guardian born in 2014. Its 298 lines, primarily in request.js, continue to ensure a valid URI.",
+    "why": "the name \"Sean\""
+   }
+  ]
+ },
+ "ea4de72cfe873b0e": {
+  "text": "Francis Gulotta’s watchful code, born on November 22nd, still quietly monitors tests for a year, now 283 lines strong. Its presence persists in the keys, a silent guardian.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "27ca1de79f77d09b": {
+  "text": "His echoes linger, a silent 269 lines still shaping the squid tests, born in 2011 and faithfully running. Isaac Z. Schlueter’s dedication, carved in 31 commits, continues to guide the proxy.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "af720c649ddf3833": {
+  "text": "Eran Hammer’s code, a quiet guardian, still diligently tests the hawk, 240 lines of it, born in 2013 and persisting today. Its watchful presence, rooted in crypto, echoes from the silent year.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "bc06491ee6c0e63c": {
+  "text": "Its echoes linger, 231 lines of code still breathing in tests/test-gzip.js, a quiet vigil begun June 30th, 2014.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "ca974d139c761687": {
+  "text": "His timing echoes still, measuring TCP connections with 183 lines of code, born in 2016 and persisting today. A quiet contribution, faithfully running from README.md.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "3e6954003cdcb8c4": {
+  "text": "Michael Matuzak’s code, a quiet guardian, still diligently manages requests and cookies, born in 2013 and persisting through five years. Its 182 lines, mostly in request.js, continue their work today.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "f04896c3bb309e14": {
+  "text": "Born 2010-05-07, gone 2013-08-07. Lived 3 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in 2010, this Request offered 316 paths and 1,228 lines of code, guided by many hands. It ceased to be in 2013, a quiet “rename” marking its three-year journey.",
+    "why": "\"316 paths\""
+   },
+   {
+    "text": "Born in 2010, this code, crafted by Mikeal Rogers, navigated a thousand requests. It ceased to be, a silent 1,228 lines, on August 7th, 2013.",
+    "why": "\"thousand requests\""
+   }
+  ]
+ },
+ "a6cd04102aaa7fce": {
+  "text": "Born in 2011, this code validated signatures, a testament to Better tests. It ceased to exist in 2014, consumed by the need for consolidation.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "bac4f5b59bff96c7": {
+  "text": "Born in February, this small runner executed tests with care, a fleeting presence of forty-seven lines. It vanished in October, seeking a more robust method, its purpose now a silent echo.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in twenty twelve, this small runner executed tests, a fleeting spark of fifteen lines. It succumbed in twenty fourteen, seeking a more robust form, leaving behind fourteen echoes.",
+    "why": "\"fifteen lines\""
+   }
+  ]
+ },
+ "a0e5d61fd7624439": {
+  "text": "Born in eleven, it tested proxy options with care. Lost to a merge, its forty-three lines now rest alongside its two years of service.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "c471cd4d1635f326": {
+  "text": "Born in eleven, seventeen, it tested proxy options with a quiet persistence. Lost to a merge, its forty-three lines and ten commits now rest peacefully.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "0461d96d3ffbef91": {
+  "text": "Born in eleven, it tested proxy options for two years, a quiet echo of ten commits. Now returned to the earth, its forty-three lines rest with James Nylen.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "751d43d64ad11e0d": {
+  "text": "Born in eleven, seventeen, it tested proxy options for google.com, a brief echo silenced on October eleventh by the merging of proxy tests.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b8cd6061fa899c55": {
+  "text": "Born in November, it tested proxy options for two years, a quiet vigil of forty-three lines. James Nylen silenced it on October eleventh, a gentle return to the earth.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, it tested proxy options for two years, a quiet twenty-three lines. James Nylen silenced it, a gentle merging of tests, resting now with the others.",
+    "why": "\"twenty-three lines\""
+   }
+  ]
+ },
+ "370aa091f518c227": {
+  "text": "Born in November, it tested proxy options for two years, a quiet guardian of 43 lines. James Nylen silenced it on October eleventh, a final merge claiming its existence.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, it tested proxy options with careful precision. Lost to a merge, its forty-three lines now rest, alongside nine brief lives.",
+    "why": "\"nine brief lives\""
+   }
+  ]
+ },
+ "10e7083660a655c2": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, it tested proxy options with a gentle, echoing port. Now silent at ten, eleven, it rests with nine others, a brief shadow in the code’s long night.",
+    "why": "\"nine others\""
+   },
+   {
+    "text": "Born in November, it tested proxy options for two years, a quiet twenty-three lines of code. It rests now, silenced by a merge, alongside nine others.",
+    "why": "\"twenty-three lines\""
+   }
+  ]
+ },
+ "16b7f05546eef356": {
+  "text": "Born in November, it tested proxy options for two years, a quiet guardian of 43 lines. James Nylen silenced it in October, returning it to the earth.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, it tested proxy options for two years, a quiet echo in ninety commits. James Nylen silenced it, returning it to the earth on October eleventh.",
+    "why": "\"ninety commits\""
+   }
+  ]
+ },
+ "0469e89f8dfec384": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, it tested proxy options with a quiet grace. Lost in the merge of October eleventh, it served nine tests, a brief but dutiful life.",
+    "why": "\"nine tests\""
+   },
+   {
+    "text": "Born in November, it tested proxy options for two years, a quiet guardian of subdomain requests. It rests now, swallowed by the merge of October, leaving nine echoes in its passing.",
+    "why": "\"nine echoes\""
+   }
+  ]
+ },
+ "ec41132bfc57a9fc": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in November, it tested proxy options for two years, a quiet vigil of ninety commits. Now returned to the earth, its forty lines rest alongside James Nylen.",
+    "why": "\"ninety commits\""
+   },
+   {
+    "text": "Born in November, it tested proxy options for two years, a quiet twenty-nine commits. Now returned to the earth, its forty-two lines rest with the others.",
+    "why": "\"twenty-nine commits\""
+   }
+  ]
+ },
+ "aa67037eec4cec6e": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in November, it tested proxy authentication with a curious request. Lost in October, its 45 lines and eight tests now rest alongside the others, a gentle echo of its brief life.",
+    "why": "\"eight tests\""
+   },
+   {
+    "text": "Born in November, it tested proxy authentication with a Basic challenge. Lost to a merge, its 45 lines and eight tests now rest peacefully.",
+    "why": "\"eight tests\""
+   }
+  ]
+ },
+ "6c3c9a10e122d48c": {
+  "text": "Born in November, it tested proxy options for two years, a quiet guardian of localhost:6768. It rests now, silenced by a merge, its 42 lines a final, gentle echo.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "0085496aef7134b5": {
+  "text": "Born in eleven, seventeen, it tested proxy authentication, a brief echo of seven commits. Now returned to the quiet, alongside its forty-three lines.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "f86bfd48ee84c297": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in eleven, seventeen, this small test served to verify proxy connections. It ceased to be, swallowed by the merge on October eleventh, a quiet twenty-four months.",
+    "why": "\"twenty-four months\""
+   },
+   {
+    "text": "Born in November, it tested proxy options for two years, a quiet vigil of forty-one lines. James Nylen silenced it in October, joining the echoes of its seven lives.",
+    "why": "\"seven lives\""
+   }
+  ]
+ },
+ "9fa2790df00d09cb": {
+  "text": "Born in 2014, this small guardian diligently enforced code style for two years, overseen by many. It rested peacefully, a 46-line guide, until its refactoring in 2017.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b5eef632e8bb5d44": {
+  "text": "Born in November, it tested the proxy’s reach. Lost in October, its forty lines served a silent, watchful purpose.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Born in eleven-eleven, it tested the proxy, a quiet twenty lines. Now returned to the earth, its purpose fulfilled, a gentle echo in the code.",
+    "why": "\"twenty lines\""
+   }
+  ]
+ },
+ "517cbc2504cb9492": {
+  "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in eleven, it tested proxy options for two years, a small echo of six calls. James Nylen silenced it on October eleventh, 2014.",
+    "why": "\"six calls\""
+   },
+   {
+    "text": "Born in November, it tested the proxy option for two years, a quiet twenty-four lines. James Nylen silenced it in October, returning it to the earth.",
+    "why": "\"twenty-four lines\""
+   }
+  ]
+ },
+ "96fdf5ecdd2c41b8": {
+  "text": "Born in 2012, this test faithfully redirected protocols with 62 lines of code, guided by Isaacs and others. It ceased to exist in 2014, a rewrite by James Nylen bringing its two-year life to a quiet end.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "c471d406fbd747e4": {
+  "text": "Born in 2011, this code crafted signatures for Twitter, a year spent diligently. Now returned to the earth, its purpose fulfilled by a newer, unified library.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "3d2301085a6474bf": {
+  "text": "Born in the winter of 2011, this agent diligently managed connections, a quiet worker of 104 lines. It ceased to exist on March 1st, 2013, now a memory alongside its six commits.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "0fc690ad0390208d": {
+  "text": "Born 2011-11-12, gone 2013-03-01. Lived 1 year.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Born in eleven-eleven, it crafted fleeting hex digits, a brief echo of oauth support. Though gone in march, its twenty lines and five commits rest peacefully, superseded by a better path.",
+    "why": "\"eleven-eleven\""
+   },
+   {
+    "text": "Born in November, it crafted random strings, a fleeting echo of oauth support. It rested in March, deemed superseded by a newer path, its fifteen lives now dust.",
+    "why": "\"fifteen lives\""
+   }
+  ]
+ }
+}

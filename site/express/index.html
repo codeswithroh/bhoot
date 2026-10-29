@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhoot · expressjs/express</title>
+<meta name="description" content="The ghosts and graves of expressjs/express, read from its git history and remembered by a local Gemma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0d0b14;--night2:#17131f;--stone:#2a2633;--stone2:#3a3545;--bone:#efe6d6;--dim:#a79fb3;--marigold:#f5a524;--marigold2:#e8710a;--candle:#ffd27a}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1200px 600px at 70% -10%,#2b2140 0,transparent 60%),var(--night);color:var(--bone);font:16px/1.6 Inter,system-ui,sans-serif}
+main{max-width:1160px;margin:0 auto;padding:56px 20px 80px}
+header{display:grid;gap:10px;margin-bottom:44px}
+.eyebrow{font-family:'Tiro Devanagari Hindi',serif;color:var(--marigold);letter-spacing:.04em;font-size:18px;margin:0}
+h1{font:700 clamp(46px,9vw,92px)/1 'Cormorant Garamond',serif;margin:0;letter-spacing:-.01em}
+h1 span{color:var(--marigold)}
+.lede{font-size:19px;color:var(--dim);max-width:760px;margin:6px 0 0}
+.lede b{color:var(--bone)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.stats span{background:var(--night2);border:1px solid #2f2840;border-radius:999px;padding:6px 14px;font-size:14px;color:var(--dim)}
+.stats b{color:var(--candle)}
+h2{font:700 38px/1.1 'Cormorant Garamond',serif;margin:56px 0 6px}
+h2+p{color:var(--dim);margin:0 0 22px;max-width:760px}
+.ghosts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.ghost{position:relative;background:linear-gradient(180deg,rgba(239,230,214,.07),rgba(239,230,214,.02));border:1px solid rgba(239,230,214,.12);border-radius:20px;padding:22px 22px 18px;overflow:hidden}
+.ghost::after{content:'';position:absolute;right:-30px;top:-30px;width:140px;height:140px;background:radial-gradient(circle,rgba(255,210,122,.10),transparent 70%);pointer-events:none}
+.ghost h3{font:700 28px/1.1 'Cormorant Garamond',serif;margin:0 46px 4px 0}
+.years{margin:0;color:var(--dim);font-size:14px}
+.haunt{margin:10px 0;font-size:16px}.haunt b{color:var(--candle);font-size:22px}
+blockquote{margin:12px 0;font:italic 500 20px/1.4 'Cormorant Garamond',serif;color:var(--bone)}
+.oldest{font-size:13px;color:var(--dim);margin:10px 0 12px}
+.oldest code{display:block;margin-top:4px;font:13px/1.45 'JetBrains Mono',monospace;color:#d7cce6;background:rgba(0,0,0,.3);padding:8px 10px;border-radius:8px;overflow-wrap:anywhere}
+.where{display:block;margin-top:4px;font-size:12px}
+.candle{position:absolute;top:18px;right:18px;width:30px;height:44px;border:0;background:none;cursor:pointer;padding:0}
+.candle::before{content:'';position:absolute;bottom:0;left:9px;width:12px;height:26px;border-radius:3px;background:linear-gradient(#f3ead8,#cbbfa8)}
+.flame{position:absolute;left:10px;bottom:26px;width:10px;height:14px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff6d6,var(--candle) 40%,var(--marigold2));opacity:.18;transition:opacity .4s;filter:blur(.3px)}
+.candle.lit .flame{opacity:1;animation:flicker 1.6s infinite ease-in-out}
+@keyframes flicker{50%{transform:scale(.92) rotate(-3deg) translateY(1px)}}
+.graves{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px 18px;align-items:end}
+.stone{background:linear-gradient(180deg,var(--stone2),var(--stone));border-radius:120px 120px 10px 10px;padding:30px 20px 18px;text-align:center;box-shadow:inset 0 2px 0 rgba(255,255,255,.06),0 18px 30px rgba(0,0,0,.35);border-bottom:6px solid #1c1924;position:relative}
+.stone::after{content:'';position:absolute;left:-12px;right:-12px;bottom:-16px;height:14px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(245,165,36,.25),transparent 70%)}
+.rip{margin:0;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--dim)}
+.stone h3{font:700 24px/1.15 'Cormorant Garamond',serif;margin:6px 0 2px;overflow-wrap:anywhere}
+.path{margin:0;font:12px 'JetBrains Mono',monospace;color:var(--dim);overflow-wrap:anywhere}
+.dates{margin:8px 0 0;font:700 22px 'Cormorant Garamond',serif;color:var(--marigold)}
+.lived{margin:0;font-size:12.5px;color:var(--dim)}
+.stone blockquote{font-size:18px}
+.cause{font-size:13px;margin:8px 0 4px}.cause span{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--dim)}
+.cause a{color:var(--bone);text-decoration-color:rgba(245,165,36,.5)}
+.by{font-size:12px;color:var(--dim);margin:6px 0 10px}
+.badge{display:inline-block;font-size:11px;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1px solid rgba(245,165,36,.4);color:var(--marigold);cursor:help}
+.badge.facts{border-color:rgba(167,159,179,.4);color:var(--dim)}
+.family{margin-top:10px;text-align:left;font-size:12.5px;color:var(--dim)}.family summary{cursor:pointer;color:var(--marigold);text-align:center}.family ul{list-style:none;padding:0;margin:8px 0 0;max-height:220px;overflow:auto}.family li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-top:1px solid rgba(255,255,255,.06)}.family code{font-size:11.5px;overflow-wrap:anywhere}
+footer{margin-top:70px;color:var(--dim);font-size:14px;border-top:1px solid #2a2338;padding-top:20px}
+footer a{color:var(--marigold)}
+.marigolds{position:fixed;inset:auto 0 0 0;height:6px;background:repeating-linear-gradient(90deg,var(--marigold) 0 18px,var(--marigold2) 18px 36px);opacity:.75}
+@media (prefers-reduced-motion:reduce){.candle.lit .flame{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <p class="eyebrow">भूत · bhoot · ghost, and the past</p>
+  <h1>The ghosts of <span>expressjs/express</span></h1>
+  <p class="lede">People who left long ago but whose code still runs, and files that lived and died in the history. Read from git on one laptop. Remembered by <b>gemma3:4b</b>, running locally. Every name, number, date and file Gemma wrote was <b>checked against git</b> before it was carved.</p>
+  <div class="stats">
+    <span><b>12</b> ghosts still running <b>22,176</b> lines</span>
+    <span><b>30</b> graves, of 545 files that died</span>
+    <span><b>41</b> of 42 remembrances by Gemma</span>
+    <span><b>9</b> invented details caught</span>
+  </div>
+</header>
+
+<h2>Still haunting</h2>
+<p>They haven't committed in a long time. Their code didn't get the message. Light a candle.</p>
+<section class="ghosts"><article class="ghost">
+    <button class="candle" aria-label="Light a candle for Douglas Christopher Wilson"><span class="flame"></span></button>
+    <h3>Douglas Christopher Wilson</h3>
+    <p class="years">2014 – 2023 · silent since 2023-11-02</p>
+    <p class="haunt"><b>13,569</b> of their lines still run, in 169 files</p>
+    <blockquote>Douglas Christopher Wilson’s code, born in 2014, still quietly fulfills its purpose, a persistent echo within 13,569 lines. Its ancient roots, like the *update connect* line, continue to guide the system today.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>* update connect to 2.14.5</code><span class="where">History.md</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for TJ Holowaychuk"><span class="flame"></span></button>
+    <h3>TJ Holowaychuk</h3>
+    <p class="years">2009 – 2014 · silent since 2014-02-19</p>
+    <p class="haunt"><b>6,483</b> of their lines still run, in 128 files</p>
+    <blockquote>“Initial release” still echoes, a ghost of 3,527 commits, now powering 6,483 lines within 128 files. TJ’s legacy persists.</blockquote>
+    <p class="oldest">oldest line still here, from 2009<br><code>* Initial release</code><span class="where">History.md</span></p>
+    <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;3,527 silent years&quot;).">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Roman Shtylman"><span class="flame"></span></button>
+    <h3>Roman Shtylman</h3>
+    <p class="years">2011 – 2014 · silent since 2014-05-12</p>
+    <p class="haunt"><b>436</b> of their lines still run, in 27 files</p>
+    <blockquote>His code, a quiet guardian, still answers requests from 2012, routing verbs with steadfast precision. A silent 12 years passed, yet 436 lines of his work continue to run.</blockquote>
+    <p class="oldest">oldest line still here, from 2012<br><code>* Delegate `.VERB(...)` calls to `router.VERB(...)`.</code><span class="where">lib/application.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Wes Todd"><span class="flame"></span></button>
+    <h3>Wes Todd</h3>
+    <p class="years">2017 – 2025 · silent since 2025-03-28</p>
+    <p class="haunt"><b>382</b> of their lines still run, in 19 files</p>
+    <blockquote>Wes Todd’s code, born in 2017, still quietly persists – 382 lines in 19 files, a testament to the `statuses` module’s embrace. His silent work, totaling 42 commits, continues to run today.</blockquote>
+    <p class="oldest">oldest line still here, from 2017<br><code>* Use `statuses` instead of `http` module for status messages</code><span class="where">History.md</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Robert Sköld"><span class="flame"></span></button>
+    <h3>Robert Sköld</h3>
+    <p class="years">2011 – 2011 · silent since 2011-12-18</p>
+    <p class="haunt"><b>311</b> of their lines still run, in 17 files</p>
+    <blockquote>Robert Sköld’s code, a quiet echo, still ensures acceptance tests run smoothly, a testament to 311 lines across 17 files, born on December 10th, 2011. Its silent vigil of 14 years continues, a gentle reassurance within error-pages.js.</blockquote>
+    <p class="oldest">oldest line still here, from 2011<br><code>res.locals.message = &#39;&#39;;</code><span class="where">examples/auth/index.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Jamie Barton"><span class="flame"></span></button>
+    <h3>Jamie Barton</h3>
+    <p class="years">2017 – 2017 · silent since 2017-03-24</p>
+    <p class="haunt"><b>214</b> of their lines still run, in 21 files</p>
+    <blockquote>Jamie Barton’s spirit persists, 214 lines of ejs still echoing through nine years of code, most notably in views shaping user interactions. Their echoes live on, a quiet testament to 21 files and a singular vision.</blockquote>
+    <p class="oldest">oldest line still here, from 2017<br><code>* a &quot;foo.ejs&quot; file Express will invoke the following internally:</code><span class="where">lib/application.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Jonathan Ong"><span class="flame"></span></button>
+    <h3>Jonathan Ong</h3>
+    <p class="years">2013 – 2014 · silent since 2014-06-05</p>
+    <p class="haunt"><b>196</b> of their lines still run, in 52 files</p>
+    <blockquote>Jonathan Ong&#39;s spirit persists, a quiet echo in 196 lines of code, born in 2013 and still diligently updating connect. Twelve years silent, yet his work endures.</blockquote>
+    <p class="oldest">oldest line still here, from 2013<br><code>* update connect</code><span class="where">History.md</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Aaron Clover"><span class="flame"></span></button>
+    <h3>Aaron Clover</h3>
+    <p class="years">2017 – 2017 · silent since 2017-07-20</p>
+    <p class="haunt"><b>152</b> of their lines still run, in 2 files</p>
+    <blockquote>Nine years he watched, a silent guardian of downloads, his code still diligently offering options to `res.sendFile()`. Aaron Clover’s spirit persists in one hundred fifty-two lines, a quiet echo of 2017.</blockquote>
+    <p class="oldest">oldest line still here, from 2017<br><code>* Optionally providing an `options` object to use with `res.sendFile()`.</code><span class="where">lib/response.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for agchou"><span class="flame"></span></button>
+    <h3>agchou</h3>
+    <p class="years">2014 – 2014 · silent since 2014-03-27</p>
+    <p class="haunt"><b>119</b> of their lines still run, in 29 files</p>
+    <blockquote>Its quiet work persists, a ghost in the code, still running after twelve years of silent dedication. 119 lines of examples, born in 2014, remain within 29 files.</blockquote>
+    <p class="oldest">oldest line still here, from 2014<br><code>var debug = require(&#39;debug&#39;)(&#39;express:application&#39;);</code><span class="where">lib/application.js</span></p>
+    <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;thirteen years&quot;).">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Greg Methvin"><span class="flame"></span></button>
+    <h3>Greg Methvin</h3>
+    <p class="years">2012 – 2013 · silent since 2013-08-16</p>
+    <p class="haunt"><b>112</b> of their lines still run, in 6 files</p>
+    <blockquote>Greg Methvin’s code, a quiet guardian, still diligently redirects, ensuring 112 lines persist after thirteen years of silent service. Its roots lie deep in test/req.subdomains.js.</blockquote>
+    <p class="oldest">oldest line still here, from 2012<br><code>it(&#39;should encode the url&#39;, function(done){</code><span class="where">test/res.redirect.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for Caridy Patino"><span class="flame"></span></button>
+    <h3>Caridy Patino</h3>
+    <p class="years">2013 – 2013 · silent since 2013-04-13</p>
+    <p class="haunt"><b>103</b> of their lines still run, in 4 files</p>
+    <blockquote>Caridy Patino’s code, born April thirteenth, still whispers its dependencies through thirteen years. A quiet, steadfast presence, it continues to guide 103 lines in four files today.</blockquote>
+    <p class="oldest">oldest line still here, from 2013<br><code>* Module dependencies.</code><span class="where">examples/view-constructor/github-view.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article>
+<article class="ghost">
+    <button class="candle" aria-label="Light a candle for chainhelen"><span class="flame"></span></button>
+    <h3>chainhelen</h3>
+    <p class="years">2017 – 2017 · silent since 2017-10-11</p>
+    <p class="haunt"><b>99</b> of their lines still run, in 13 files</p>
+    <blockquote>Its quiet echoes persist, a path found in 99 lines of code, still shaping views since 2017. A steadfast guide, born in examples/auth/index.js.</blockquote>
+    <p class="oldest">oldest line still here, from 2017<br><code>app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));</code><span class="where">examples/auth/index.js</span></p>
+    <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+  </article></section>
+
+<h2>The departed</h2>
+<p>Files that were born, changed, and deleted. The cause of death is the commit that removed them.</p>
+<section class="graves"><article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="Contributing.md">Contributing.md</h3>
+      <p class="path">Contributing.md</p>
+      <p class="dates">2014 – 2025</p>
+      <p class="lived">lived 11 years · 246 lines · 32 commits</p>
+      <blockquote>Born 2014-05-12, gone 2025-06-09. Lived 11 years.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/52872b84caf8426492108f59c1c229ac991396da" rel="noopener">“fix(docs): move documentation and charters to the discussions and .github … (#6427)”</a></p>
+      <p class="by">born to Roman Shtylman · laid to rest by Sebastian Beltran</p>
+      <span class="badge facts" title="Gemma&#39;s words were rejected (&quot;32 contributors&quot;; &quot;32 contributions&quot;), so the stone carries plain facts.">plain facts</span>
+      <details class="family"><summary>family plot · 4 more laid to rest by the same commit</summary><ul><li><code>Collaborator-Guide.md</code> <span>2014 – 2025</span></li><li><code>Release-Process.md</code> <span>2016 – 2025</span></li><li><code>Charter.md</code> <span>2019 – 2025</span></li><li><code>Triager-Guide.md</code> <span>2019 – 2025</span></li></ul></details>
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title=".travis.yml">.travis.yml</h3>
+      <p class="path">.travis.yml</p>
+      <p class="dates">2011 – 2021</p>
+      <p class="lived">lived 9 years · 78 lines · 84 commits</p>
+      <blockquote>Born in twenty-eleven, this file guided builds with many Node.js versions, now resting with eighty-four commits and a final shift to GitHub Actions, overseen by Douglas Christopher Wilson.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/ca3c8634289ab20a787572bedcb3261f9336fbb5" rel="noopener">“build: use GitHub Actions instead of Travis CI”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="examples/multipart/index.js">index.js</h3>
+      <p class="path">examples/multipart/index.js</p>
+      <p class="dates">2010 – 2023</p>
+      <p class="lived">lived 12 years · 63 lines · 24 commits</p>
+      <blockquote>Born in 2010, this small file offered a simple form for uploads. It ceased to exist in May 2023, a quiet twelve years after its creation.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/3abea7f8189c73f7f219d8878343d961eb9a4910" rel="noopener">“examples: remove multipart example”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by riddlew</p>
+      <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;thirteen-year&quot;).">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="lib/router/index.js">index.js</h3>
+      <p class="path">lib/router/index.js</p>
+      <p class="dates">2011 – 2015</p>
+      <p class="lived">lived 4 years · 627 lines · 132 commits</p>
+      <blockquote>Born in 2011, this router guided paths with 627 lines of code, a legacy of Tj and Douglas. It rests now, a silent 132 commits fading into the vastness of 2015.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/cec5780db4f07a61e21e139e38af20b02dd5ae3a" rel="noopener">“Use router module for routing”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="bin/express">express</h3>
+      <p class="path">bin/express</p>
+      <p class="dates">2010 – 2014</p>
+      <p class="lived">lived 3 years · 424 lines · 153 commits</p>
+      <blockquote>Born in 2010, this small executable, crafted by visionmedia, offered 424 lines of code and served its purpose for three years. It ceased to be in January of 2014, a silent removal by Jonathan Ong, leaving behind 153 commits and the echoes of many contributors.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/476f8deb07d48aac146a94262ea65b7991d840be" rel="noopener">“remove binary”</a></p>
+      <p class="by">born to visionmedia · laid to rest by Jonathan Ong</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="SECURITY.md">SECURITY.md</h3>
+      <p class="path">SECURITY.md</p>
+      <p class="dates">2015 – 2025</p>
+      <p class="lived">lived 9 years · 57 lines · 14 commits</p>
+      <blockquote>Born in 2015, this document guided the Express project’s security for nine years, lost on June 13th, 2025, by Ulises Gascon. Its 57 lines of policy offered guidance to many, seeking a safer path.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/b8fc000f3116237b2bcc0df41b5b999f95da37ae" rel="noopener">“docs: use global Security policy”</a></p>
+      <p class="by">born to Rand McKinney · laid to rest by Ulises Gascon</p>
+      <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;fifteen collaborators&quot;).">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="examples/jade/index.js">index.js</h3>
+      <p class="path">examples/jade/index.js</p>
+      <p class="dates">2010 – 2017</p>
+      <p class="lived">lived 6 years · 53 lines · 27 commits</p>
+      <blockquote>Born in July 2010, this jade example offered six years of service, rendered 53 lines of code and 27 commits. Removed by Jamie Barton in February 2017, it rests peacefully amongst the project’s history.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/57d3dfd9f828c4529fa90dde4b3d216898181e99" rel="noopener">“examples: merge the jade example into ejs”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Jamie Barton</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="lib/router/route.js">route.js</h3>
+      <p class="path">lib/router/route.js</p>
+      <p class="dates">2011 – 2015</p>
+      <p class="lived">lived 4 years · 211 lines · 37 commits</p>
+      <blockquote>Born in 2011, this Route, crafted by Tj, navigated paths for four years, ultimately silenced by a need for a newer router. It rests now, 211 lines of code, alongside its creators.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/cec5780db4f07a61e21e139e38af20b02dd5ae3a" rel="noopener">“Use router module for routing”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="Makefile">Makefile</h3>
+      <p class="path">Makefile</p>
+      <p class="dates">2009 – 2014</p>
+      <p class="lived">lived 4 years · 35 lines · 97 commits</p>
+      <blockquote>Born in November 2009, this Makefile diligently ran tests and coverage, a quiet 35 lines of code touched by many hands. It rests now, lost on May 18th, 2014, a final 97 commits marking its brief, useful life.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/12da523ff7165ce6a2d0f50450d8e902f3b6ec87" rel="noopener">“build: test coverage with istanbul”</a></p>
+      <p class="by">born to visionmedia · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="benchmarks/middleware.js">middleware.js</h3>
+      <p class="path">benchmarks/middleware.js</p>
+      <p class="dates">2013 – 2026</p>
+      <p class="lived">lived 12 years · 21 lines · 4 commits</p>
+      <blockquote>Born in 2013, this middleware echoed “Hello World” for twelve years, guided by TJ Holowaychuk, before being gently laid to rest in 2026.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/5a4568abfe05f71d5559e1db9321627af501ebe3" rel="noopener">“chore: remove benchmarks directory (#6992)”</a></p>
+      <p class="by">born to TJ Holowaychuk · laid to rest by Sebastian Beltran</p>
+      <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;thirteen benchmarks&quot;).">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="docs/guide.md">guide.md</h3>
+      <p class="path">docs/guide.md</p>
+      <p class="dates">2010 – 2012</p>
+      <p class="lived">lived 1 year · 1,366 lines · 168 commits</p>
+      <blockquote>Here lies the guide, born July 13, 2010, and crafted by Tj. It breathed for a year, offering 1,366 lines of instruction, before being gently silenced on April 16, 2012.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/856f3b3be681bf2c9c955455639eb5e35cc97c36" rel="noopener">“removed old docs”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by TJ Holowaychuk</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      <details class="family"><summary>family plot · 7 more laid to rest by the same commit</summary><ul><li><code>docs/guide.html</code> <span>2010 – 2012</span></li><li><code>docs/migrate.html</code> <span>2010 – 2012</span></li><li><code>docs/index.html</code> <span>2010 – 2012</span></li><li><code>docs/screencasts.html</code> <span>2010 – 2012</span></li><li><code>docs/contrib.html</code> <span>2010 – 2012</span></li><li><code>docs/applications.html</code> <span>2010 – 2012</span></li><li><code>docs/executable.html</code> <span>2010 – 2012</span></li></ul></details>
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="test/express.test.js">express.test.js</h3>
+      <p class="path">test/express.test.js</p>
+      <p class="dates">2010 – 2011</p>
+      <p class="lived">lived 1 year · 425 lines · 79 commits</p>
+      <blockquote>Born in 2010, this small server test, crafted by visionmedia, offered a brief echo of an upload example. It ceased to be on November 8th, a quiet removal by Tj Holowaychuk, leaving behind 425 lines and 79 commits.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/9efc4b23dc77e106dcb09ec4774254a7a53372eb" rel="noopener">“Remove old tests”</a></p>
+      <p class="by">born to visionmedia · laid to rest by Tj Holowaychuk</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      <details class="family"><summary>family plot · 2 more laid to rest by the same commit</summary><ul><li><code>test/view.test.js</code> <span>2010 – 2011</span></li><li><code>test/response.test.js</code> <span>2010 – 2011</span></li></ul></details>
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="lib/express/view.js">view.js</h3>
+      <p class="path">lib/express/view.js</p>
+      <p class="dates">2009 – 2011</p>
+      <p class="lived">lived 1 year · 279 lines · 131 commits</p>
+      <blockquote>Born in July, this view module served faithfully for a year, offering 279 lines of code and 131 commits. It rests now, updated with Connect, alongside visionmedia and Tj Holowaychuk.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/42af4e40ae2d19db9e22e12ab525f8ed128ad4ec" rel="noopener">“Updated connect submodule”</a></p>
+      <p class="by">born to visionmedia · laid to rest by Tj Holowaychuk</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="examples/expose-data-to-client/index.js">index.js</h3>
+      <p class="path">examples/expose-data-to-client/index.js</p>
+      <p class="dates">2012 – 2017</p>
+      <p class="lived">lived 4 years · 65 lines · 5 commits</p>
+      <blockquote>Born in 2012, this small code breathed with 65 lines and five commits, exposing data to the client. It rests now, removed in 2017 by Douglas Christopher Wilson, a quiet echo of TJ Holowaychuk’s example.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/7ef92f8a171aeb7c90260a0ba92015862da1a0eb" rel="noopener">“examples: remove semi-broken expose-data-to-client example”</a></p>
+      <p class="by">born to TJ Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="test/req.param.js">req.param.js</h3>
+      <p class="path">test/req.param.js</p>
+      <p class="dates">2011 – 2015</p>
+      <p class="lived">lived 3 years · 62 lines · 8 commits</p>
+      <blockquote>Born on November 11th, 2011, this small code breathed life into request parameters. Lost on July 7th, 2015, it rests now, a 62-line echo of tests and three years.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/21d52daafba1bc7247d6ecdcf30719a21ded4e42" rel="noopener">“Remove req.param()”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma-retry" title="Written by Gemma. Every name, number, date and file in it was checked against git (first try rejected: &quot;eight lives&quot;).">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="support/app.js">app.js</h3>
+      <p class="path">support/app.js</p>
+      <p class="dates">2011 – 2014</p>
+      <p class="lived">lived 3 years · 67 lines · 10 commits</p>
+      <blockquote>Born in 2011, this small code breathed with ten commits, offering simple greetings and a JSON response. Lost in November, it rests now, a quiet 67 lines alongside Tj Holowaychuk’s design.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/ebfa00a9c04ba7d911cd5ad88c1e0567c935ae22" rel="noopener">“build: remove support folder”</a></p>
+      <p class="by">born to Tj Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article>
+<article class="grave">
+    <div class="stone">
+      <p class="rip">here lies</p>
+      <h3 title="examples/auth/pass.js">pass.js</h3>
+      <p class="path">examples/auth/pass.js</p>
+      <p class="dates">2012 – 2017</p>
+      <p class="lived">lived 4 years · 49 lines · 5 commits</p>
+      <blockquote>Born in June 2012, this code, crafted by TJ, diligently employed pbkdf2 for password hashing. It rests now, a 49-line echo, lost on February 16th, 2017.</blockquote>
+      <p class="cause"><span>cause of death</span> <a href="https://github.com/expressjs/express/commit/034f261fea1eed22d79706ef3c29666acc5fce4a" rel="noopener">“examples: use pbkdf2-password module in auth example”</a></p>
+      <p class="by">born to TJ Holowaychuk · laid to rest by Douglas Christopher Wilson</p>
+      <span class="badge gemma" title="Written by Gemma. Every name, number, date and file in it was checked against git.">checked against git</span>
+      
+    </div>
+  </article></section>
+
+<footer>Made with <a href="https://github.com/codeswithroh/bhoot">Bhoot</a> from the history at 2026-10-23. Hover a badge to see what was checked, or what was thrown out.</footer>
+</main>
+<div class="marigolds" aria-hidden="true"></div>
+<script>
+const key='bhoot-candles:expressjs/express';
+let lit={};try{lit=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+document.querySelectorAll('.candle').forEach((c,i)=>{
+  if(lit[i])c.classList.add('lit');
+  c.addEventListener('click',()=>{c.classList.toggle('lit');lit[i]=c.classList.contains('lit');try{localStorage.setItem(key,JSON.stringify(lit))}catch(e){}});
+});
+</script>
+</body>
+</html>

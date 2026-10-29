@@ -1,0 +1,2744 @@
+{
+ "repo": "request/request",
+ "head": 1581464386000,
+ "model": "gemma3:4b",
+ "generatedAt": "2026-10-29T21:47:37.968Z",
+ "ghosts": [
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "James Nylen",
+    "lines": [
+     "name: James Nylen",
+     "first commit: 2012-10-09 (\"Add more auth options, including digest support\")",
+     "last commit: 2015-02-13 (\"Deprecate Node v0.8.x\")",
+     "commits: 168",
+     "silent for: 4 years",
+     "lines still running today: 3,922",
+     "files those lines live in: 62",
+     "most of them are in: tests/test-tunnel.js (414 lines), CHANGELOG.md (385 lines), tests/test-proxy.js (280 lines)",
+     "oldest line of theirs still here, from 2013, in tests/test-basic-auth.js: var assert = require('assert')"
+    ],
+    "code": "var assert = require('assert')",
+    "counts": [
+     [
+      168,
+      "commits"
+     ],
+     [
+      4,
+      "years"
+     ],
+     [
+      3922,
+      "lines"
+     ],
+     [
+      62,
+      "files"
+     ],
+     [
+      414,
+      "lines"
+     ],
+     [
+      385,
+      "lines"
+     ],
+     [
+      280,
+      "lines"
+     ],
+     [
+      2,
+      "years"
+     ]
+    ],
+    "bornYear": 2012,
+    "goneYear": 2015,
+    "makers": [
+     "james nylen"
+    ],
+    "breaker": "",
+    "activeYears": 2
+   },
+   "remembrance": {
+    "text": "James Nylen’s code, a steadfast guardian, still diligently tests connections for four years, a silent watch from 2012 to 2015. Its 3,922 lines, rooted in tests, continue to run.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "James Nylen",
+    "first": 1349810307000,
+    "last": 1423842924000,
+    "commits": 168,
+    "lines": 3922,
+    "files": 62,
+    "oldestLine": "var assert = require('assert')",
+    "oldestFile": "tests/test-basic-auth.js",
+    "oldestAt": 1358379838000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "simov",
+    "lines": [
+     "name: simov",
+     "first commit: 2014-10-18 (\"Stream multipart/related bodies\")",
+     "last commit: 2018-08-02 (\"These are not going to fail if there is a server listening on those ports\")",
+     "commits: 259",
+     "silent for: 1 year",
+     "lines still running today: 3,000",
+     "files those lines live in: 58",
+     "most of them are in: README.md (383 lines), CHANGELOG.md (319 lines), lib/tunnel.js (159 lines)",
+     "oldest line of theirs still here, from 2014, in tests/test-multipart.js: var http = require('http')"
+    ],
+    "code": "var http = require('http')",
+    "counts": [
+     [
+      259,
+      "commits"
+     ],
+     [
+      1,
+      "years"
+     ],
+     [
+      3000,
+      "lines"
+     ],
+     [
+      58,
+      "files"
+     ],
+     [
+      383,
+      "lines"
+     ],
+     [
+      319,
+      "lines"
+     ],
+     [
+      159,
+      "lines"
+     ],
+     [
+      3,
+      "years"
+     ]
+    ],
+    "bornYear": 2014,
+    "goneYear": 2018,
+    "makers": [
+     "simov"
+    ],
+    "breaker": "",
+    "activeYears": 3
+   },
+   "remembrance": {
+    "text": "Last seen 2018-08-02. 3,000 of their lines still run here.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "From 2014, its echoes persist; a thousand lines still hum, testing multipart bodies with tireless grace, born of 259 commits.",
+      "why": "\"thousand lines\""
+     },
+     {
+      "text": "From 2014, its echoes persist, a thousand lines still dutifully handle multipart bodies. The spirit of simov lives on, woven through README.md and tunnel.js.",
+      "why": "\"thousand lines\""
+     }
+    ]
+   },
+   "meta": {
+    "name": "simov",
+    "first": 1413635828000,
+    "last": 1533232540000,
+    "commits": 259,
+    "lines": 3000,
+    "files": 58,
+    "oldestLine": "var http = require('http')",
+    "oldestFile": "tests/test-multipart.js",
+    "oldestAt": 1413704632000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Ahmad Nassri",
+    "lines": [
+     "name: Ahmad Nassri",
+     "first commit: 2015-03-22 (\"HTTP Archive 1.2 support\")",
+     "last commit: 2017-03-17 (\"refactor(lint): replace eslint with standard (#2579)\")",
+     "commits: 13",
+     "silent for: 2 years",
+     "lines still running today: 1,381",
+     "files those lines live in: 73",
+     "most of them are in: tests/test-oauth.js (270 lines), lib/har.js (181 lines), tests/test-har.js (171 lines)",
+     "oldest line of theirs still here, from 2015, in lib/har.js: var fs = require('fs')"
+    ],
+    "code": "var fs = require('fs')",
+    "counts": [
+     [
+      13,
+      "commits"
+     ],
+     [
+      2,
+      "years"
+     ],
+     [
+      1381,
+      "lines"
+     ],
+     [
+      73,
+      "files"
+     ],
+     [
+      270,
+      "lines"
+     ],
+     [
+      181,
+      "lines"
+     ],
+     [
+      171,
+      "lines"
+     ],
+     [
+      1,
+      "years"
+     ]
+    ],
+    "bornYear": 2015,
+    "goneYear": 2017,
+    "makers": [
+     "ahmad nassri"
+    ],
+    "breaker": "",
+    "activeYears": 1
+   },
+   "remembrance": {
+    "text": "Ahmad's code, born in 2015, still diligently tests the HTTP Archive, a silent guardian now running 1,381 lines. Its spirit persists, echoing through tests and har.js.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Ahmad Nassri",
+    "first": 1427001775000,
+    "last": 1489711677000,
+    "commits": 13,
+    "lines": 1381,
+    "files": 73,
+    "oldestLine": "var fs = require('fs')",
+    "oldestFile": "lib/har.js",
+    "oldestAt": 1427001775000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Brian White",
+    "lines": [
+     "name: Brian White",
+     "first commit: 2012-07-27 (\"Allow parser errors to bubble up to request\")",
+     "last commit: 2016-11-03 (\"Make other connect timeout test more reliable too\")",
+     "commits: 15",
+     "silent for: 3 years",
+     "lines still running today: 519",
+     "files those lines live in: 55",
+     "most of them are in: tests/test-timeout.js (111 lines), request.js (54 lines), tests/test-baseUrl.js (47 lines)",
+     "oldest line of theirs still here, from 2016, in tests/test-timeout.js: // packet. StackOverflow suggests these hosts:"
+    ],
+    "code": "// packet. StackOverflow suggests these hosts:",
+    "counts": [
+     [
+      15,
+      "commits"
+     ],
+     [
+      3,
+      "years"
+     ],
+     [
+      519,
+      "lines"
+     ],
+     [
+      55,
+      "files"
+     ],
+     [
+      111,
+      "lines"
+     ],
+     [
+      54,
+      "lines"
+     ],
+     [
+      47,
+      "lines"
+     ],
+     [
+      4,
+      "years"
+     ]
+    ],
+    "bornYear": 2012,
+    "goneYear": 2016,
+    "makers": [
+     "brian white"
+    ],
+    "breaker": "",
+    "activeYears": 4
+   },
+   "remembrance": {
+    "text": "Last seen 2016-11-03. 519 of their lines still run here.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Brian White's echoes persist, 519 lines of tests still running, born in 2012 and quietly maintained for three years. His code, particularly within tests/test-timeout.js, continues its watchful vigil.",
+      "why": "\"quietly maintained for three years\""
+     },
+     {
+      "text": "His echoes linger, a persistent pulse of 519 lines in tests/test-timeout.js, born of 2012 and still running today. Brian White’s code continues, a quiet testament to fifteen years of work.",
+      "why": "\"fifteen years\""
+     }
+    ]
+   },
+   "meta": {
+    "name": "Brian White",
+    "first": 1343395123000,
+    "last": 1478176590000,
+    "commits": 15,
+    "lines": 519,
+    "files": 55,
+    "oldestLine": "// packet. StackOverflow suggests these hosts:",
+    "oldestFile": "tests/test-timeout.js",
+    "oldestAt": 1476405472000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "João Jerónimo",
+    "lines": [
+     "name: João Jerónimo",
+     "first commit: 2013-08-07 (\"put Request out\")",
+     "last commit: 2014-01-20 (\"simpler\")",
+     "commits: 5",
+     "silent for: 6 years",
+     "lines still running today: 435",
+     "files those lines live in: 1",
+     "most of them are in: request.js (435 lines)",
+     "oldest line of theirs still here, from 2013, in request.js: var globalPool = {}"
+    ],
+    "code": "var globalPool = {}",
+    "counts": [
+     [
+      5,
+      "commits"
+     ],
+     [
+      6,
+      "years"
+     ],
+     [
+      435,
+      "lines"
+     ],
+     [
+      1,
+      "files"
+     ],
+     [
+      435,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2013,
+    "goneYear": 2014,
+    "makers": [
+     "joão jerónimo"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "João Jerónimo’s “put Request out” continues, a quiet 435 lines in request.js, born in 2013 and still running after six years.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "João Jerónimo",
+    "first": 1375879333000,
+    "last": 1390234931000,
+    "commits": 5,
+    "lines": 435,
+    "files": 1,
+    "oldestLine": "var globalPool = {}",
+    "oldestFile": "request.js",
+    "oldestAt": 1375893703000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "seanstrom",
+    "lines": [
+     "name: seanstrom",
+     "first commit: 2014-08-24 (\"initial cleanup of the index.js\")",
+     "last commit: 2015-05-12 (\"revise tests and test helpers\")",
+     "commits: 35",
+     "silent for: 4 years",
+     "lines still running today: 298",
+     "files those lines live in: 11",
+     "most of them are in: request.js (138 lines), lib/getProxyFromURI.js (72 lines), lib/helpers.js (25 lines)",
+     "oldest line of theirs still here, from 2014, in index.js: throw new Error('undefined is not a valid uri or options object.')"
+    ],
+    "code": "throw new Error('undefined is not a valid uri or options object.')",
+    "counts": [
+     [
+      35,
+      "commits"
+     ],
+     [
+      4,
+      "years"
+     ],
+     [
+      298,
+      "lines"
+     ],
+     [
+      11,
+      "files"
+     ],
+     [
+      138,
+      "lines"
+     ],
+     [
+      72,
+      "lines"
+     ],
+     [
+      25,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2014,
+    "goneYear": 2015,
+    "makers": [
+     "snjedi",
+     "seanstrom"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "Last seen 2015-05-12. 298 of their lines still run here.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Its work, a quiet sentinel, persists. Twenty-nine-eight lines, born in 2014, still guide the request.",
+      "why": "\"Twenty-nine-eight lines\""
+     },
+     {
+      "text": "Here lies Sean Strom, whose diligent code still guides the system, a watchful guardian born in 2014. Its 298 lines, primarily in request.js, continue to ensure a valid URI.",
+      "why": "the name \"Sean\""
+     }
+    ]
+   },
+   "meta": {
+    "name": "seanstrom",
+    "first": 1408918674000,
+    "last": 1431447345000,
+    "commits": 35,
+    "lines": 298,
+    "files": 11,
+    "oldestLine": "throw new Error('undefined is not a valid uri or options object.')",
+    "oldestFile": "index.js",
+    "oldestAt": 1408918674000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Francis Gulotta",
+    "lines": [
+     "name: Francis Gulotta",
+     "first commit: 2018-11-22 (\"chore: Add probot-stale\")",
+     "last commit: 2018-12-24 (\"fix: Clear timeout on `#abort()` (#3090)\")",
+     "commits: 7",
+     "silent for: 1 year",
+     "lines still running today: 283",
+     "files those lines live in: 20",
+     "most of them are in: tests/ssl/ca/server.key (49 lines), tests/ssl/ca/client-enc.key (26 lines), tests/ssl/ca/client.key (25 lines)",
+     "oldest line of theirs still here, from 2018, in .github/stale.yml: # Number of days of inactivity before an issue becomes stale"
+    ],
+    "code": "# Number of days of inactivity before an issue becomes stale",
+    "counts": [
+     [
+      7,
+      "commits"
+     ],
+     [
+      1,
+      "years"
+     ],
+     [
+      283,
+      "lines"
+     ],
+     [
+      20,
+      "files"
+     ],
+     [
+      49,
+      "lines"
+     ],
+     [
+      26,
+      "lines"
+     ],
+     [
+      25,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2018,
+    "goneYear": 2018,
+    "makers": [
+     "francis gulotta"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "Francis Gulotta’s watchful code, born on November 22nd, still quietly monitors tests for a year, now 283 lines strong. Its presence persists in the keys, a silent guardian.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Francis Gulotta",
+    "first": 1542862988000,
+    "last": 1545679619000,
+    "commits": 7,
+    "lines": 283,
+    "files": 20,
+    "oldestLine": "# Number of days of inactivity before an issue becomes stale",
+    "oldestFile": ".github/stale.yml",
+    "oldestAt": 1542862988000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Isaac Z. Schlueter",
+    "lines": [
+     "name: Isaac Z. Schlueter",
+     "first commit: 2011-09-04 (\"Test that chunked responses are properly toString'ed\")",
+     "last commit: 2014-09-04 (\"Fix #1051 Parse auth properly when using non-tunneling proxy\")",
+     "commits: 31",
+     "silent for: 5 years",
+     "lines still running today: 269",
+     "files those lines live in: 20",
+     "most of them are in: tests/squid.conf (76 lines), tests/test-proxy-connect.js (22 lines), tests/ssl/ca/ca.cnf (20 lines)",
+     "oldest line of theirs still here, from 2011, in tests/server.js: exports.createChunkResponse = function (chunks, contentType) {"
+    ],
+    "code": "exports.createChunkResponse = function (chunks, contentType) {",
+    "counts": [
+     [
+      31,
+      "commits"
+     ],
+     [
+      5,
+      "years"
+     ],
+     [
+      269,
+      "lines"
+     ],
+     [
+      20,
+      "files"
+     ],
+     [
+      76,
+      "lines"
+     ],
+     [
+      22,
+      "lines"
+     ],
+     [
+      20,
+      "lines"
+     ],
+     [
+      3,
+      "years"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "isaacs",
+     "isaac z. schlueter"
+    ],
+    "breaker": "",
+    "activeYears": 3
+   },
+   "remembrance": {
+    "text": "His echoes linger, a silent 269 lines still shaping the squid tests, born in 2011 and faithfully running. Isaac Z. Schlueter’s dedication, carved in 31 commits, continues to guide the proxy.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Isaac Z. Schlueter",
+    "first": 1315165737000,
+    "last": 1409867118000,
+    "commits": 31,
+    "lines": 269,
+    "files": 20,
+    "oldestLine": "exports.createChunkResponse = function (chunks, contentType) {",
+    "oldestFile": "tests/server.js",
+    "oldestAt": 1315165737000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Eran Hammer",
+    "lines": [
+     "name: Eran Hammer",
+     "first commit: 2013-03-02 (\"hawk 0.9.0\")",
+     "last commit: 2018-05-19 (\"Replace hawk dependency with a local implemenation (#2943)\")",
+     "commits: 4",
+     "silent for: 1 year",
+     "lines still running today: 240",
+     "files those lines live in: 3",
+     "most of them are in: tests/test-hawk.js (149 lines), lib/hawk.js (89 lines), request.js (2 lines)",
+     "oldest line of theirs still here, from 2018, in lib/hawk.js: var crypto = require('crypto')"
+    ],
+    "code": "var crypto = require('crypto')",
+    "counts": [
+     [
+      4,
+      "commits"
+     ],
+     [
+      1,
+      "years"
+     ],
+     [
+      240,
+      "lines"
+     ],
+     [
+      3,
+      "files"
+     ],
+     [
+      149,
+      "lines"
+     ],
+     [
+      89,
+      "lines"
+     ],
+     [
+      2,
+      "lines"
+     ],
+     [
+      5,
+      "years"
+     ]
+    ],
+    "bornYear": 2013,
+    "goneYear": 2018,
+    "makers": [
+     "eran hammer"
+    ],
+    "breaker": "",
+    "activeYears": 5
+   },
+   "remembrance": {
+    "text": "Eran Hammer’s code, a quiet guardian, still diligently tests the hawk, 240 lines of it, born in 2013 and persisting today. Its watchful presence, rooted in crypto, echoes from the silent year.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Eran Hammer",
+    "first": 1362218823000,
+    "last": 1526741266000,
+    "commits": 4,
+    "lines": 240,
+    "files": 3,
+    "oldestLine": "var crypto = require('crypto')",
+    "oldestFile": "lib/hawk.js",
+    "oldestAt": 1526741266000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Kevin Locke",
+    "lines": [
+     "name: Kevin Locke",
+     "first commit: 2014-06-30 (\"[PATCH v2] Add support for gzip content decoding\")",
+     "last commit: 2015-05-08 (\"Fix pause before response arrives\")",
+     "commits: 5",
+     "silent for: 4 years",
+     "lines still running today: 231",
+     "files those lines live in: 5",
+     "most of them are in: tests/test-gzip.js (108 lines), tests/test-pipes.js (60 lines), request.js (33 lines)",
+     "oldest line of theirs still here, from 2014, in request.js: if (self.gzip && !self.hasHeader('accept-encoding')) {"
+    ],
+    "code": "if (self.gzip && !self.hasHeader('accept-encoding')) {",
+    "counts": [
+     [
+      5,
+      "commits"
+     ],
+     [
+      4,
+      "years"
+     ],
+     [
+      231,
+      "lines"
+     ],
+     [
+      5,
+      "files"
+     ],
+     [
+      108,
+      "lines"
+     ],
+     [
+      60,
+      "lines"
+     ],
+     [
+      33,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2014,
+    "goneYear": 2015,
+    "makers": [
+     "kevin locke"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "Its echoes linger, 231 lines of code still breathing in tests/test-gzip.js, a quiet vigil begun June 30th, 2014.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Kevin Locke",
+    "first": 1404157918000,
+    "last": 1431121965000,
+    "commits": 5,
+    "lines": 231,
+    "files": 5,
+    "oldestLine": "if (self.gzip && !self.hasHeader('accept-encoding')) {",
+    "oldestFile": "request.js",
+    "oldestAt": 1404157918000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Nic Jansma",
+    "lines": [
+     "name: Nic Jansma",
+     "first commit: 2016-11-06 (\"Adds .timings array with dns, tcp, request and response times\")",
+     "last commit: 2017-03-16 (\"Updated comment\")",
+     "commits: 10",
+     "silent for: 2 years",
+     "lines still running today: 183",
+     "files those lines live in: 3",
+     "most of them are in: request.js (87 lines), tests/test-timing.js (79 lines), README.md (17 lines)",
+     "oldest line of theirs still here, from 2016, in README.md: - `tcp`: Duration of TCP connection (`timings.connect` - `timings.socket`)"
+    ],
+    "code": "- `tcp`: Duration of TCP connection (`timings.connect` - `timings.socket`)",
+    "counts": [
+     [
+      10,
+      "commits"
+     ],
+     [
+      2,
+      "years"
+     ],
+     [
+      183,
+      "lines"
+     ],
+     [
+      3,
+      "files"
+     ],
+     [
+      87,
+      "lines"
+     ],
+     [
+      79,
+      "lines"
+     ],
+     [
+      17,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2016,
+    "goneYear": 2017,
+    "makers": [
+     "nic jansma"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "His timing echoes still, measuring TCP connections with 183 lines of code, born in 2016 and persisting today. A quiet contribution, faithfully running from README.md.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Nic Jansma",
+    "first": 1478395381000,
+    "last": 1489706553000,
+    "commits": 10,
+    "lines": 183,
+    "files": 3,
+    "oldestLine": "- `tcp`: Duration of TCP connection (`timings.connect` - `timings.socket`)",
+    "oldestFile": "README.md",
+    "oldestAt": 1478395381000
+   }
+  },
+  {
+   "facts": {
+    "kind": "ghost",
+    "title": "Michael Matuzak",
+    "lines": [
+     "name: Michael Matuzak",
+     "first commit: 2013-12-20 (\"updating README example: cookie jar api changed cookie module changed to tough-cookie\")",
+     "last commit: 2014-10-13 (\"fix no-use-before-define lint warnings\")",
+     "commits: 4",
+     "silent for: 5 years",
+     "lines still running today: 182",
+     "files those lines live in: 4",
+     "most of them are in: request.js (167 lines), index.js (8 lines), lib/cookies.js (6 lines)",
+     "oldest line of theirs still here, from 2014, in index.js: if (typeof uri === 'undefined') {"
+    ],
+    "code": "if (typeof uri === 'undefined') {",
+    "counts": [
+     [
+      4,
+      "commits"
+     ],
+     [
+      5,
+      "years"
+     ],
+     [
+      182,
+      "lines"
+     ],
+     [
+      4,
+      "files"
+     ],
+     [
+      167,
+      "lines"
+     ],
+     [
+      8,
+      "lines"
+     ],
+     [
+      6,
+      "lines"
+     ],
+     [
+      0,
+      "years"
+     ]
+    ],
+    "bornYear": 2013,
+    "goneYear": 2014,
+    "makers": [
+     "michael matuzak"
+    ],
+    "breaker": "",
+    "activeYears": 0
+   },
+   "remembrance": {
+    "text": "Michael Matuzak’s code, a quiet guardian, still diligently manages requests and cookies, born in 2013 and persisting through five years. Its 182 lines, mostly in request.js, continue their work today.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "name": "Michael Matuzak",
+    "first": 1387507307000,
+    "last": 1413241752000,
+    "commits": 4,
+    "lines": 182,
+    "files": 4,
+    "oldestLine": "if (typeof uri === 'undefined') {",
+    "oldestFile": "index.js",
+    "oldestAt": 1413225209000
+   }
+  }
+ ],
+ "graves": [
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "Request.js",
+    "lines": [
+     "file: Request.js",
+     "born: 2010-05-07, written by Mikeal Rogers (\"Initial commit. Request package.\")",
+     "died: 2013-08-07, removed by João Jerónimo",
+     "cause of death (the commit that deleted it): \"rename Request\"",
+     "lived: 3 years",
+     "size at death: 1,228 lines",
+     "commits in its life: 316",
+     "people who changed it: Mikeal Rogers, isaacs, Andreas Lind Petersen, Jan Jongboom and 90 more"
+    ],
+    "code": "var http = require('http')\n  , https = false\n  , tls = false\n  , url = require('url')\n  , util = require('util')\n  , stream = require('stream')\n  , qs = require('qs')\n  , querystring = require('querystring')\n  , crypto = require('crypto')\n\n  , oauth = require('oauth-sign')\n  , hawk = require('hawk')\n  , aws = require('aws-sign')\n  , httpSignature = require('http-signature')\n  , uuid = require('node-uuid')\n  , mime = require('mime')\n  , tunnel = require('tunnel-agent')\n  , safeStringify = require('json-stringify-safe')\n\n  , ForeverAgent = require('forever-agent')\n  , FormData = require('form-data')\n\n  , Cookie = require('cookie-jar')\n  , CookieJar = Cookie.Jar\n  , cookieJar = new CookieJar\n\n  , copy = require('./lib/copy')\n  , debug = require('./lib/debug')\n  , getSafe = require('./lib/getSafe')\n  ;\n\nvar globalPool = {}\nvar isUrl = /^https?:/i\n\ntry {\n  https = require('https')\n} catch (e) {}\n\ntry {\n  tls = require('tls')",
+    "counts": [
+     [
+      3,
+      "years"
+     ],
+     [
+      1228,
+      "lines"
+     ],
+     [
+      316,
+      "commits"
+     ],
+     [
+      94,
+      "people"
+     ]
+    ],
+    "bornYear": 2010,
+    "goneYear": 2013,
+    "makers": [
+     "mikeal rogers",
+     "mikeal rogers",
+     "isaacs",
+     "andreas lind petersen",
+     "jan jongboom",
+     "chris sainty",
+     "alessioalex",
+     "brian white",
+     "derek bredensteiner",
+     "tom wilson",
+     "james nylen",
+     "maciej małecki",
+     "romain",
+     "marco rogers",
+     "vinay pulim",
+     "ben atkin",
+     "alexander shusta",
+     "benjamin hanes",
+     "sam placette",
+     "jason smith (air)",
+     "eran hammer",
+     "mathias buus",
+     "justin plock",
+     "nicholas penree",
+     "nathan lafreniere",
+     "marsup",
+     "zephrax",
+     "itay neeman",
+     "dmitry petukhov",
+     "jann horn",
+     "jonathan roes",
+     "clément nodet",
+     "stanisław wasiutyński",
+     "matt smillie",
+     "joão jerónimo",
+     "ben drucker",
+     "romain laï-king",
+     "wyatt preul",
+     "sunil pai",
+     "alan gutierrez",
+     "cristian",
+     "adam blackburn",
+     "michael anderson",
+     "jason lebrun",
+     "yyfrankyy",
+     "preilly",
+     "david i. lehn",
+     "tõnis tiigi",
+     "ken perkins",
+     "oleg elifantiev",
+     "rory haddon",
+     "stéphane alnet",
+     "kbackowski",
+     "jai pandya",
+     "kevin pullin",
+     "mafintosh",
+     "seth pollack",
+     "matthew loar",
+     "andrew schaaf",
+     "nick niemeir",
+     "jérémy bethmont",
+     "forrest l norvell",
+     "mac-",
+     "pedro landeiro",
+     "mirza kapetanovic",
+     "ypocat",
+     "dan jenkins",
+     "julian gautier",
+     "alex zylman",
+     "sandro santilli",
+     "alex indigo",
+     "stuart harris",
+     "ben cherry",
+     "nicolas chambrier",
+     "tim shadel",
+     "sreuter",
+     "seth bridges",
+     "jerome gravel-niquet",
+     "visnu pitiyanuvath",
+     "josh perez",
+     "james halliday",
+     "fabiano nunes",
+     "andrew peace",
+     "ian young",
+     "john hewson",
+     "arnout kazemier",
+     "konstantin käfer",
+     "dan mactough",
+     "aaron heckmann",
+     "chris williams",
+     "mike brevoort",
+     "pelle wessman",
+     "topper bowers",
+     "dav glass",
+     "benjamin fritsch"
+    ],
+    "breaker": "joão jerónimo"
+   },
+   "remembrance": {
+    "text": "Born 2010-05-07, gone 2013-08-07. Lived 3 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in 2010, this Request offered 316 paths and 1,228 lines of code, guided by many hands. It ceased to be in 2013, a quiet “rename” marking its three-year journey.",
+      "why": "\"316 paths\""
+     },
+     {
+      "text": "Born in 2010, this code, crafted by Mikeal Rogers, navigated a thousand requests. It ceased to be, a silent 1,228 lines, on August 7th, 2013.",
+      "why": "\"thousand requests\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "Request.js",
+    "born": 1273269817000,
+    "died": 1375893527000,
+    "bornBy": "Mikeal Rogers",
+    "diedBy": "João Jerónimo",
+    "cause": "rename Request",
+    "hash": "920f9b88f7dd8f8d153e72371b1bf2d16d5e4160",
+    "lines": 1228,
+    "commits": 316,
+    "authors": [
+     "Mikeal Rogers",
+     "isaacs",
+     "Andreas Lind Petersen",
+     "Jan Jongboom"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-https-strict.js",
+    "lines": [
+     "file: tests/test-https-strict.js",
+     "born: 2011-01-29, written by Mikeal Rogers (\"Better tests.\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Fold tests/test-https-strict.js into tests/test-https.js\"",
+     "lived: 3 years",
+     "size at death: 105 lines",
+     "commits in its life: 19",
+     "people who changed it: Mikeal Rogers, Ben Atkin, Derek Bredensteiner, isaacs and 2 more"
+    ],
+    "code": "// a test where we validate the siguature of the keys\n// otherwise exactly the same as the ssl test\n\nvar server = require('./server')\n  , request = require('../index')\n  , fs = require('fs')\n  , path = require('path')\n  , tape = require('tape')\n\nvar caFile = path.resolve(__dirname, 'ssl/ca/ca.crt')\n  , ca = fs.readFileSync(caFile)\n  , opts = {\n    key: path.resolve(__dirname, 'ssl/ca/server.key'),\n    cert: path.resolve(__dirname, 'ssl/ca/server.crt')\n  }\n  , s = server.createSSLServer(null, opts)\n\ntape('setup', function(t) {\n  s.listen(s.port, function() {\n    t.end()\n  })\n})\n\nfunction runTest(name, test) {\n  tape(name, function(t) {\n    s.on('/' + name, test.resp)\n    test.uri = s.url + '/' + name\n    test.strictSSL = true\n    test.ca = ca\n    test.headers = { host: 'testing.request.mikealrogers.com' }\n    request(test, function(err, resp, body) {\n      t.equal(err, null)\n      if (test.expectBody) {\n        t.deepEqual(test.expectBody, body)\n      }\n      t.end()\n    })\n  })\n}\n",
+    "counts": [
+     [
+      3,
+      "years"
+     ],
+     [
+      105,
+      "lines"
+     ],
+     [
+      19,
+      "commits"
+     ],
+     [
+      6,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "mikeal rogers",
+     "mikeal rogers",
+     "ben atkin",
+     "derek bredensteiner",
+     "isaacs",
+     "james nylen",
+     "jason smith (air)"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in 2011, this code validated signatures, a testament to Better tests. It ceased to exist in 2014, consumed by the need for consolidation.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-https-strict.js",
+    "born": 1296344371000,
+    "died": 1413003311000,
+    "bornBy": "Mikeal Rogers",
+    "diedBy": "James Nylen",
+    "cause": "Fold tests/test-https-strict.js into tests/test-https.js",
+    "hash": "32d4a2d19811002af046d2c8bc11d97fedd09d0f",
+    "lines": 105,
+    "commits": 19,
+    "authors": [
+     "Mikeal Rogers",
+     "Ben Atkin",
+     "Derek Bredensteiner",
+     "isaacs"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/run.js",
+    "lines": [
+     "file: tests/run.js",
+     "born: 2012-02-18, written by Chris Sainty (\"Added a js based test runner so I can run tests on windows.\")",
+     "died: 2014-10-06, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Use a real test runner\"",
+     "lived: 2 years",
+     "size at death: 47 lines",
+     "commits in its life: 14",
+     "people who changed it: Mikeal Rogers, isaacs, Chris Sainty, John McCarthy and 4 more"
+    ],
+    "code": "var spawn = require('child_process').spawn\n  , exitCode = 0\n  , timeout = 10000\n  , fs = require('fs')\n  ;\n\n// clear proxy releated environment variables\ndelete process.env.HTTP_PROXY\ndelete process.env.http_proxy\ndelete process.env.HTTPS_PROXY\ndelete process.env.https_proxy\n  \nfs.readdir(__dirname, function (e, files) {\n  if (e) throw e\n\n  var tests = files.filter(function (f) {return f.slice(0, 'test-'.length) === 'test-'})\n\n  var next = function () {\n    if (tests.length === 0) process.exit(exitCode);\n\n    var file = tests.shift()\n    console.log(file)\n    var proc = spawn('node', [ 'tests/' + file ])\n\n    var killed = false\n    var t = setTimeout(function () {\n      proc.kill()\n      exitCode += 1\n      console.error(file + ' timeout')\n      killed = true\n    }, timeout)\n\n    proc.stdout.pipe(process.stdout)\n    proc.stderr.pipe(process.stderr)\n    proc.on('exit', function (code) {\n      if (code && !killed) console.error(file + ' failed')\n      exitCode += code || 0\n      clearTimeout(t)\n      next()\n    })",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      47,
+      "lines"
+     ],
+     [
+      14,
+      "commits"
+     ],
+     [
+      8,
+      "people"
+     ]
+    ],
+    "bornYear": 2012,
+    "goneYear": 2014,
+    "makers": [
+     "chris sainty",
+     "mikeal rogers",
+     "isaacs",
+     "chris sainty",
+     "john mccarthy",
+     "james nylen",
+     "maciej małecki",
+     "alex indigo",
+     "tim shadel"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in February, this small runner executed tests with care, a fleeting presence of forty-seven lines. It vanished in October, seeking a more robust method, its purpose now a silent echo.",
+    "by": "gemma-retry",
+    "rejected": [
+     {
+      "text": "Born in twenty twelve, this small runner executed tests, a fleeting spark of fifteen lines. It succumbed in twenty fourteen, seeking a more robust form, leaving behind fourteen echoes.",
+      "why": "\"fifteen lines\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/run.js",
+    "born": 1329572799000,
+    "died": 1412598183000,
+    "bornBy": "Chris Sainty",
+    "diedBy": "James Nylen",
+    "cause": "Use a real test runner",
+    "hash": "9522e871cc0f410087276ae7de7de18c50f8e026",
+    "lines": 47,
+    "commits": 14,
+    "authors": [
+     "Mikeal Rogers",
+     "isaacs",
+     "Chris Sainty",
+     "John McCarthy"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-case-insensitive.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-case-insensitive.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 10",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'GOOGLE.COM';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called because GOOGLE.COM should\n       match google.com\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      10,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in eleven, it tested proxy options with care. Lost to a merge, its forty-three lines now rest alongside its two years of service.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-case-insensitive.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 10,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-sub-port.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-sub-port.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 10",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'oogle.com:80';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should be called (because oogle.com:80 shouldn't\n       match google.com:80)\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      10,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in eleven, seventeen, it tested proxy options with a quiet persistence. Lost to a merge, its forty-three lines and ten commits now rest peacefully.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-sub-port.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 10,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-sub.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-sub.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 10",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'oogle.com';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should be called, because oogle.com does not match\n       target google.com\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      10,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in eleven, it tested proxy options for two years, a quiet echo of ten commits. Now returned to the earth, its forty-three lines rest with James Nylen.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-sub.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 10,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-lowercase.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-lowercase.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 42 lines",
+     "commits in its life: 10",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.no_proxy = 'google.com';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called, because env no_proxy === NO_PROXY\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(!called, 'the request must not be made to the proxy server')",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      42,
+      "lines"
+     ],
+     [
+      10,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in eleven, seventeen, it tested proxy options for google.com, a brief echo silenced on October eleventh by the merging of proxy tests.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-lowercase.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 42,
+    "commits": 10,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-multiple.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-multiple.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'foo.bar,google.com';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called, because foo.bar doesn't match\n       target host, but google.com does.\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in November, it tested proxy options for two years, a quiet vigil of forty-three lines. James Nylen silenced it on October eleventh, a gentle return to the earth.",
+    "by": "gemma-retry",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, it tested proxy options for two years, a quiet twenty-three lines. James Nylen silenced it, a gentle merging of tests, resting now with the others.",
+      "why": "\"twenty-three lines\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-multiple.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-multiple2.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-multiple2.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, Mikeal Rogers, Chris Sainty, John McCarthy and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'foo.bar,bar.foo';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should be called, because neither foo.bar nor bar.foo\n       match google.com\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "mikeal rogers",
+     "chris sainty",
+     "john mccarthy",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in November, it tested proxy options for two years, a quiet guardian of 43 lines. James Nylen silenced it on October eleventh, a final merge claiming its existence.",
+    "by": "gemma-retry",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, it tested proxy options with careful precision. Lost to a merge, its forty-three lines now rest, alongside nine brief lives.",
+      "why": "\"nine brief lives\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-multiple2.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "John McCarthy"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-port-implicit.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-port-implicit.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'google.com:80';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called, because implicit target\n       port of 80 matches google.com:80\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, it tested proxy options with a gentle, echoing port. Now silent at ten, eleven, it rests with nine others, a brief shadow in the code’s long night.",
+      "why": "\"nine others\""
+     },
+     {
+      "text": "Born in November, it tested proxy options for two years, a quiet twenty-three lines of code. It rests now, silenced by a merge, alongside nine others.",
+      "why": "\"twenty-three lines\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-port-implicit.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-port.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-port.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, Mikeal Rogers, Chris Sainty, John McCarthy and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'google.com:1234';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should be called, because target of google.com:80\n       doesn't match google.com:1234\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "mikeal rogers",
+     "chris sainty",
+     "john mccarthy",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in November, it tested proxy options for two years, a quiet guardian of 43 lines. James Nylen silenced it in October, returning it to the earth.",
+    "by": "gemma-retry",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, it tested proxy options for two years, a quiet echo in ninety commits. James Nylen silenced it, returning it to the earth on October eleventh.",
+      "why": "\"ninety commits\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-port.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "John McCarthy"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-subdomain.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-subdomain.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'www.google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'google.com';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called, because google.com matches\n       all subdomains, and our target is www.google.com\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, it tested proxy options with a quiet grace. Lost in the merge of October eleventh, it served nine tests, a brief but dutiful life.",
+      "why": "\"nine tests\""
+     },
+     {
+      "text": "Born in November, it tested proxy options for two years, a quiet guardian of subdomain requests. It rests now, swallowed by the merge of October, leaving nine echoes in its passing.",
+      "why": "\"nine echoes\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-subdomain.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-star.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-star.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 42 lines",
+     "commits in its life: 9",
+     "people who changed it: Sam Day, John McCarthy, Mikeal Rogers, Chris Sainty and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = '*';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called, because * matches all hosts.\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(!called, 'the request must not be made to the proxy server')",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      42,
+      "lines"
+     ],
+     [
+      9,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "sam day",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in November, it tested proxy options for two years, a quiet vigil of ninety commits. Now returned to the earth, its forty lines rest alongside James Nylen.",
+      "why": "\"ninety commits\""
+     },
+     {
+      "text": "Born in November, it tested proxy options for two years, a quiet twenty-nine commits. Now returned to the earth, its forty-two lines rest with the others.",
+      "why": "\"twenty-nine commits\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-star.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 42,
+    "commits": 9,
+    "authors": [
+     "Sam Day",
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-auth-no-uri-auth.js",
+    "lines": [
+     "file: tests/test-proxy-auth-no-uri-auth.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 45 lines",
+     "commits in its life: 8",
+     "people who changed it: isaacs, Mikeal Rogers, Chris Sainty, James Nylen and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  , tape = require('tape')\n\nvar s = server.createServer()\n\ntape('setup', function(t) {\n  s.listen(s.port, function() {\n    t.end()\n  })\n})\n\ntape('proxy', function(t) {\n  var called = false\n\n  s.on('http://google.com/', function(req, res) {\n    called = true\n    t.equal(req.headers.host, 'google.com')\n    t.equal(req.headers['proxy-authorization'], 'Basic dXNlcjpwYXNz')\n    t.equal(req.headers.authorization, undefined)\n    res.writeHeader(200)\n    res.end()\n  })\n\n  request ({\n    url: 'http://google.com',\n    proxy: 'http://user:pass@localhost:' + s.port\n  }, function(err, res, body) {\n    t.equal(err, null)\n    t.equal(res.statusCode, 200)\n    t.equal(called, true, 'the request must be made to the proxy server')\n    t.end()\n  })\n})\n",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      45,
+      "lines"
+     ],
+     [
+      8,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "isaacs",
+     "mikeal rogers",
+     "chris sainty",
+     "james nylen",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in November, it tested proxy authentication with a curious request. Lost in October, its 45 lines and eight tests now rest alongside the others, a gentle echo of its brief life.",
+      "why": "\"eight tests\""
+     },
+     {
+      "text": "Born in November, it tested proxy authentication with a Basic challenge. Lost to a merge, its 45 lines and eight tests now rest peacefully.",
+      "why": "\"eight tests\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-auth-no-uri-auth.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 45,
+    "commits": 8,
+    "authors": [
+     "isaacs",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "James Nylen"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 42 lines",
+     "commits in its life: 8",
+     "people who changed it: John McCarthy, Mikeal Rogers, Chris Sainty, Sam Day and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\nprocess.env.NO_PROXY = 'google.com';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n       also the NO_PROXY env. Net result is proxy\n       should NOT be called.\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(!called, 'the request must not be made to the proxy server')",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      42,
+      "lines"
+     ],
+     [
+      8,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "sam day",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in November, it tested proxy options for two years, a quiet guardian of localhost:6768. It rests now, silenced by a merge, its 42 lines a final, gentle echo.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 42,
+    "commits": 8,
+    "authors": [
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "Sam Day"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-uri-auth-no-proxy-auth.js",
+    "lines": [
+     "file: tests/test-proxy-uri-auth-no-proxy-auth.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 43 lines",
+     "commits in its life: 7",
+     "people who changed it: isaacs, Mikeal Rogers, Chris Sainty, Dominic Tarr"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    assert.equal(req.headers['proxy-authorization'], undefined)\n    assert.equal(req.headers.authorization, 'Basic dXNlcjpwYXNz')\n    console.error(\"headers\", req.headers)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://user:pass@'+proxiedHost,\n    proxy: 'http://localhost:'+port\n    /*\n    //should behave as if these arguments where passed:\n    url: 'http://localhost:'+port,\n    headers: {host: proxiedHost}\n    //*/\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      43,
+      "lines"
+     ],
+     [
+      7,
+      "commits"
+     ],
+     [
+      4,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "isaacs",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in eleven, seventeen, it tested proxy authentication, a brief echo of seven commits. Now returned to the quiet, alongside its forty-three lines.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-proxy-uri-auth-no-proxy-auth.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 43,
+    "commits": 7,
+    "authors": [
+     "isaacs",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "Dominic Tarr"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-no_proxy-env-ignored.js",
+    "lines": [
+     "file: tests/test-proxy-no_proxy-env-ignored.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 41 lines",
+     "commits in its life: 7",
+     "people who changed it: Mikeal Rogers, Chris Sainty, Sam Day, John McCarthy and 1 more"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.NO_PROXY = '*';\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    proxy: 'http://localhost:'+port\n    /* NO_PROXY should be ignored, because we've explicitly\n       passed a proxy.\n    */\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(called, 'the request must be made to the proxy server')\n})",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      41,
+      "lines"
+     ],
+     [
+      7,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "mikeal rogers",
+     "chris sainty",
+     "sam day",
+     "john mccarthy",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in eleven, seventeen, this small test served to verify proxy connections. It ceased to be, swallowed by the merge on October eleventh, a quiet twenty-four months.",
+      "why": "\"twenty-four months\""
+     },
+     {
+      "text": "Born in November, it tested proxy options for two years, a quiet vigil of forty-one lines. James Nylen silenced it in October, joining the echoes of its seven lives.",
+      "why": "\"seven lives\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-no_proxy-env-ignored.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 41,
+    "commits": 7,
+    "authors": [
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "Sam Day",
+     "John McCarthy"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": ".eslintrc",
+    "lines": [
+     "file: .eslintrc",
+     "born: 2014-10-01, written by FredKSchott (\"add basic linting to request library\")",
+     "died: 2017-03-17, removed by Ahmad Nassri",
+     "cause of death (the commit that deleted it): \"refactor(lint): replace eslint with standard (#2579)\"",
+     "lived: 2 years",
+     "size at death: 46 lines",
+     "commits in its life: 10",
+     "people who changed it: froatsnook, FredKSchott, simov, James Nylen and 1 more"
+    ],
+    "code": "{\n  \"env\": {\n    \"node\": true\n  },\n  \"rules\": {\n    // 2-space indentation\n    \"indent\": [2, 2, {\"SwitchCase\": 1}],\n    // Disallow semi-colons, unless needed to disambiguate statement\n    \"semi\": [2, \"never\"],\n    // Require strings to use single quotes\n    \"quotes\": [2, \"single\"],\n    // Require curly braces for all control statements\n    \"curly\": 2,\n    // Disallow using variables and functions before they've been defined\n    \"no-use-before-define\": 2,\n    // Allow any case for variable naming\n    \"camelcase\": 0,\n    // Disallow unused variables, except as function arguments\n    \"no-unused-vars\": [2, {\"args\":\"none\"}],\n    // Allow leading underscores for method names\n    // REASON: we use underscores to denote private methods\n    \"no-underscore-dangle\": 0,\n    // Allow multi spaces around operators since they are\n    // used for alignment.  This is not consistent in the\n    // code.\n    \"no-multi-spaces\": 0,\n    // Style rule is: most objects use { beforeColon: false, afterColon: true }, unless aligning which uses:\n    //\n    // {\n    //   beforeColon : true,\n    //   afterColon  : true\n    // }\n    //\n    // eslint can't handle this, so the check is disabled.\n    \"key-spacing\": 0,\n    // Allow shadowing vars in outer scope (needs discussion)\n    \"no-shadow\": 0,\n    // Use if () { }\n    //       ^ space\n    \"keyword-spacing\": [2, {\"after\": true}],",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      46,
+      "lines"
+     ],
+     [
+      10,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2014,
+    "goneYear": 2017,
+    "makers": [
+     "fredkschott",
+     "froatsnook",
+     "fredkschott",
+     "simov",
+     "james nylen",
+     "fred k. schott"
+    ],
+    "breaker": "ahmad nassri"
+   },
+   "remembrance": {
+    "text": "Born in 2014, this small guardian diligently enforced code style for two years, overseen by many. It rested peacefully, a 46-line guide, until its refactoring in 2017.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": ".eslintrc",
+    "born": 1412203309000,
+    "died": 1489711677000,
+    "bornBy": "FredKSchott",
+    "diedBy": "Ahmad Nassri",
+    "cause": "refactor(lint): replace eslint with standard (#2579)",
+    "hash": "b12a6245d9acdb1e13c6486d427801e123fdafae",
+    "lines": 46,
+    "commits": 10,
+    "authors": [
+     "froatsnook",
+     "FredKSchott",
+     "simov",
+     "James Nylen"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-null.js",
+    "lines": [
+     "file: tests/test-proxy-null.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 40 lines",
+     "commits in its life: 7",
+     "people who changed it: John McCarthy, Mikeal Rogers, Chris Sainty, Dominic Tarr"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    // should not read from HTTP_PROXY env var\n    proxy: null,\n    timeout: 500,\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(!called, 'the request must not be made to the proxy server')\n})\n",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      40,
+      "lines"
+     ],
+     [
+      7,
+      "commits"
+     ],
+     [
+      4,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "john mccarthy",
+     "mikeal rogers",
+     "chris sainty",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in November, it tested the proxy’s reach. Lost in October, its forty lines served a silent, watchful purpose.",
+    "by": "gemma-retry",
+    "rejected": [
+     {
+      "text": "Born in eleven-eleven, it tested the proxy, a quiet twenty lines. Now returned to the earth, its purpose fulfilled, a gentle echo in the code.",
+      "why": "\"twenty lines\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-null.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 40,
+    "commits": 7,
+    "authors": [
+     "John McCarthy",
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "Dominic Tarr"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-proxy-env.js",
+    "lines": [
+     "file: tests/test-proxy-env.js",
+     "born: 2011-11-17, written by Dominic Tarr (\"Add test for proxy option\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Merge all proxy tests into tests/test-proxy.js\"",
+     "lived: 2 years",
+     "size at death: 42 lines",
+     "commits in its life: 6",
+     "people who changed it: Mikeal Rogers, Chris Sainty, John McCarthy, Dominic Tarr"
+    ],
+    "code": "var server = require('./server')\n  , events = require('events')\n  , stream = require('stream')\n  , assert = require('assert')\n  , fs = require('fs')\n  , request = require('../index')\n  , path = require('path')\n  , util = require('util')\n  ;\n\nvar port = 6768\n  , called = false\n  , proxiedHost = 'google.com'\n  ;\n\n// set up environment variable\nprocess.env.HTTP_PROXY = 'http://localhost:'+port;\n  \nvar s = server.createServer(port)\ns.listen(port, function () {\n  s.on('http://google.com/', function (req, res) {\n    called = true\n    assert.equal(req.headers.host, proxiedHost)\n    res.writeHeader(200)\n    res.end()\n  })\n  request ({\n    url: 'http://'+proxiedHost,\n    /* should read from HTTP_PROXY env var and \n    // behave as if these arguments where passed:\n    url: 'http://localhost:'+port,\n    headers: {host: proxiedHost}\n    //*/\n  }, function (err, res, body) {\n    s.close()\n  })\n})\n\nprocess.on('exit', function () {\n  assert.ok(called, 'the request must be made to the proxy server')",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      42,
+      "lines"
+     ],
+     [
+      6,
+      "commits"
+     ],
+     [
+      4,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2014,
+    "makers": [
+     "dominic tarr",
+     "mikeal rogers",
+     "chris sainty",
+     "john mccarthy",
+     "dominic tarr"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-17, gone 2014-10-11. Lived 2 years.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in eleven, it tested proxy options for two years, a small echo of six calls. James Nylen silenced it on October eleventh, 2014.",
+      "why": "\"six calls\""
+     },
+     {
+      "text": "Born in November, it tested the proxy option for two years, a quiet twenty-four lines. James Nylen silenced it in October, returning it to the earth.",
+      "why": "\"twenty-four lines\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "tests/test-proxy-env.js",
+    "born": 1321489918000,
+    "died": 1413041168000,
+    "bornBy": "Dominic Tarr",
+    "diedBy": "James Nylen",
+    "cause": "Merge all proxy tests into tests/test-proxy.js",
+    "hash": "9c26c4b4ac0dbe0c4eb27177cb333b84b7f11eed",
+    "lines": 42,
+    "commits": 6,
+    "authors": [
+     "Mikeal Rogers",
+     "Chris Sainty",
+     "John McCarthy",
+     "Dominic Tarr"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "tests/test-protocol-changing-redirect.js",
+    "lines": [
+     "file: tests/test-protocol-changing-redirect.js",
+     "born: 2012-03-14, written by isaacs (\"Fix #206 Change HTTP/HTTPS agent when redirecting between protocols\")",
+     "died: 2014-10-11, removed by James Nylen",
+     "cause of death (the commit that deleted it): \"Rewrite tests/test-protocol-changing-redirect.js to use tape\"",
+     "lived: 2 years",
+     "size at death: 62 lines",
+     "commits in its life: 3",
+     "people who changed it: Mikeal Rogers, Maciej Małecki, isaacs"
+    ],
+    "code": "var server = require('./server')\n  , assert = require('assert')\n  , request = require('../index')\n\n\nvar s = server.createServer()\nvar ss = server.createSSLServer()\nvar sUrl = 'http://localhost:' + s.port\nvar ssUrl = 'https://localhost:' + ss.port\n\ns.listen(s.port, bouncy(s, ssUrl))\nss.listen(ss.port, bouncy(ss, sUrl))\n\nvar hits = {}\nvar expect = {}\nvar pending = 0\nfunction bouncy (s, server) { return function () {\n\n  var redirs = { a: 'b'\n               , b: 'c'\n               , c: 'd'\n               , d: 'e'\n               , e: 'f'\n               , f: 'g'\n               , g: 'h'\n               , h: 'end' }\n\n  var perm = true\n  Object.keys(redirs).forEach(function (p) {\n    var t = redirs[p]\n\n    // switch type each time\n    var type = perm ? 301 : 302\n    perm = !perm\n    s.on('/' + p, function (req, res) {\n      res.writeHead(type, { location: server + '/' + t })\n      res.end()\n    })\n  })\n",
+    "counts": [
+     [
+      2,
+      "years"
+     ],
+     [
+      62,
+      "lines"
+     ],
+     [
+      3,
+      "commits"
+     ],
+     [
+      3,
+      "people"
+     ]
+    ],
+    "bornYear": 2012,
+    "goneYear": 2014,
+    "makers": [
+     "isaacs",
+     "mikeal rogers",
+     "maciej małecki",
+     "isaacs"
+    ],
+    "breaker": "james nylen"
+   },
+   "remembrance": {
+    "text": "Born in 2012, this test faithfully redirected protocols with 62 lines of code, guided by Isaacs and others. It ceased to exist in 2014, a rewrite by James Nylen bringing its two-year life to a quiet end.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "tests/test-protocol-changing-redirect.js",
+    "born": 1331763614000,
+    "died": 1413012318000,
+    "bornBy": "isaacs",
+    "diedBy": "James Nylen",
+    "cause": "Rewrite tests/test-protocol-changing-redirect.js to use tape",
+    "hash": "6dd97eaf0e135f1a673d6fad7e80052424ee60fe",
+    "lines": 62,
+    "commits": 3,
+    "authors": [
+     "Mikeal Rogers",
+     "Maciej Małecki",
+     "isaacs"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "oauth.js",
+    "lines": [
+     "file: oauth.js",
+     "born: 2011-11-12, written by Mikeal Rogers (\"Adding some oauth support, tested with Twitter.\")",
+     "died: 2013-03-01, removed by Mikeal Rogers",
+     "cause of death (the commit that deleted it): \"OAuth signing is now in its own library.\"",
+     "lived: 1 year",
+     "size at death: 44 lines",
+     "commits in its life: 12",
+     "people who changed it: Mikeal Rogers, Jeff Marshall, alessioalex, Nano Documet and 1 more"
+    ],
+    "code": "var crypto = require('crypto')\n  , qs = require('querystring')\n  ;\n\nfunction sha1 (key, body) {\n  return crypto.createHmac('sha1', key).update(body).digest('base64')\n}\n\nfunction rfc3986 (str) {\n  return encodeURIComponent(str)\n    .replace(/!/g,'%21')\n    .replace(/\\*/g,'%2A')\n    .replace(/\\(/g,'%28')\n    .replace(/\\)/g,'%29')\n    .replace(/'/g,'%27')\n    ;\n}\n\nfunction hmacsign (httpMethod, base_uri, params, consumer_secret, token_secret) {\n  // adapted from https://dev.twitter.com/docs/auth/oauth and \n  // https://dev.twitter.com/docs/auth/creating-signature\n\n  var querystring = Object.keys(params).sort().map(function(key){\n    // big WTF here with the escape + encoding but it's what twitter wants\n    return escape(rfc3986(key)) + \"%3D\" + escape(rfc3986(params[key]))\n  }).join('%26')\n\n  var base = [\n    httpMethod ? httpMethod.toUpperCase() : 'GET',\n    rfc3986(base_uri),\n    querystring\n  ].join('&')\n\n  var key = [\n    consumer_secret,\n    token_secret || ''\n  ].map(rfc3986).join('&')\n\n  return sha1(key, base)\n}",
+    "counts": [
+     [
+      1,
+      "years"
+     ],
+     [
+      44,
+      "lines"
+     ],
+     [
+      12,
+      "commits"
+     ],
+     [
+      5,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2013,
+    "makers": [
+     "mikeal rogers",
+     "mikeal rogers",
+     "jeff marshall",
+     "alessioalex",
+     "nano documet",
+     "chris o'hara"
+    ],
+    "breaker": "mikeal rogers"
+   },
+   "remembrance": {
+    "text": "Born in 2011, this code crafted signatures for Twitter, a year spent diligently. Now returned to the earth, its purpose fulfilled by a newer, unified library.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "oauth.js",
+    "born": 1321090314000,
+    "died": 1362169688000,
+    "bornBy": "Mikeal Rogers",
+    "diedBy": "Mikeal Rogers",
+    "cause": "OAuth signing is now in its own library.",
+    "hash": "fbed7234d7b532813105efdc4c54777396a6773b",
+    "lines": 44,
+    "commits": 12,
+    "authors": [
+     "Mikeal Rogers",
+     "Jeff Marshall",
+     "alessioalex",
+     "Nano Documet"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "forever.js",
+    "lines": [
+     "file: forever.js",
+     "born: 2011-12-30, written by Jann Horn (\"add \"forever\" method\")",
+     "died: 2013-03-01, removed by Mikeal Rogers",
+     "cause of death (the commit that deleted it): \"Forever agent is now it's own package.\"",
+     "lived: 1 year",
+     "size at death: 104 lines",
+     "commits in its life: 6",
+     "people who changed it: Jann Horn, isaacs, Mikeal Rogers"
+    ],
+    "code": "module.exports = ForeverAgent\nForeverAgent.SSL = ForeverAgentSSL\n\nvar util = require('util')\n  , Agent = require('http').Agent\n  , net = require('net')\n  , tls = require('tls')\n  , AgentSSL = require('https').Agent\n\nfunction ForeverAgent(options) {\n  var self = this\n  self.options = options || {}\n  self.requests = {}\n  self.sockets = {}\n  self.freeSockets = {}\n  self.maxSockets = self.options.maxSockets || Agent.defaultMaxSockets\n  self.minSockets = self.options.minSockets || ForeverAgent.defaultMinSockets\n  self.on('free', function(socket, host, port) {\n    var name = host + ':' + port\n    if (self.requests[name] && self.requests[name].length) {\n      self.requests[name].shift().onSocket(socket)\n    } else if (self.sockets[name].length < self.minSockets) {\n      if (!self.freeSockets[name]) self.freeSockets[name] = []\n      self.freeSockets[name].push(socket)\n      \n      // if an error happens while we don't use the socket anyway, meh, throw the socket away\n      function onIdleError() {\n        socket.destroy()\n      }\n      socket._onIdleError = onIdleError\n      socket.on('error', onIdleError)\n    } else {\n      // If there are no pending requests just destroy the\n      // socket and it will get removed from the pool. This\n      // gets us out of timeout issues and allows us to\n      // default to Connection:keep-alive.\n      socket.destroy()\n    }\n  })\n",
+    "counts": [
+     [
+      1,
+      "years"
+     ],
+     [
+      104,
+      "lines"
+     ],
+     [
+      6,
+      "commits"
+     ],
+     [
+      3,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2013,
+    "makers": [
+     "jann horn",
+     "jann horn",
+     "isaacs",
+     "mikeal rogers"
+    ],
+    "breaker": "mikeal rogers"
+   },
+   "remembrance": {
+    "text": "Born in the winter of 2011, this agent diligently managed connections, a quiet worker of 104 lines. It ceased to exist on March 1st, 2013, now a memory alongside its six commits.",
+    "by": "gemma",
+    "rejected": []
+   },
+   "meta": {
+    "path": "forever.js",
+    "born": 1325282742000,
+    "died": 1362170336000,
+    "bornBy": "Jann Horn",
+    "diedBy": "Mikeal Rogers",
+    "cause": "Forever agent is now it's own package.",
+    "hash": "ef5ab90277fb00d0e8eb1c565b0f6ef8c52601d3",
+    "lines": 104,
+    "commits": 6,
+    "authors": [
+     "Jann Horn",
+     "isaacs",
+     "Mikeal Rogers"
+    ]
+   }
+  },
+  {
+   "facts": {
+    "kind": "grave",
+    "title": "uuid.js",
+    "lines": [
+     "file: uuid.js",
+     "born: 2011-11-12, written by Mikeal Rogers (\"Adding some oauth support, tested with Twitter.\")",
+     "died: 2013-03-01, removed by Mikeal Rogers",
+     "cause of death (the commit that deleted it): \"node-uuid is much better.\"",
+     "lived: 1 year",
+     "size at death: 20 lines",
+     "commits in its life: 5",
+     "people who changed it: alessioalex, Mikeal Rogers"
+    ],
+    "code": "module.exports = function () {\n  var s = [], itoh = '0123456789ABCDEF'\n \n  // Make array of random hex digits. The UUID only has 32 digits in it, but we\n  // allocate an extra items to make room for the '-'s we'll be inserting.\n  for (var i = 0; i <36; i++) s[i] = Math.floor(Math.random()*0x10)\n \n  // Conform to RFC-4122, section 4.4\n  s[14] = 4;  // Set 4 high bits of time_high field to version\n  s[19] = (s[19] & 0x3) | 0x8  // Specify 2 high bits of clock sequence\n \n  // Convert to hex chars\n  for (var i = 0; i <36; i++) s[i] = itoh[s[i]]\n \n  // Insert '-'s\n  s[8] = s[13] = s[18] = s[23] = '-'\n \n  return s.join('')\n}\n",
+    "counts": [
+     [
+      1,
+      "years"
+     ],
+     [
+      20,
+      "lines"
+     ],
+     [
+      5,
+      "commits"
+     ],
+     [
+      2,
+      "people"
+     ]
+    ],
+    "bornYear": 2011,
+    "goneYear": 2013,
+    "makers": [
+     "mikeal rogers",
+     "alessioalex",
+     "mikeal rogers"
+    ],
+    "breaker": "mikeal rogers"
+   },
+   "remembrance": {
+    "text": "Born 2011-11-12, gone 2013-03-01. Lived 1 year.",
+    "by": "facts",
+    "rejected": [
+     {
+      "text": "Born in eleven-eleven, it crafted fleeting hex digits, a brief echo of oauth support. Though gone in march, its twenty lines and five commits rest peacefully, superseded by a better path.",
+      "why": "\"eleven-eleven\""
+     },
+     {
+      "text": "Born in November, it crafted random strings, a fleeting echo of oauth support. It rested in March, deemed superseded by a newer path, its fifteen lives now dust.",
+      "why": "\"fifteen lives\""
+     }
+    ]
+   },
+   "meta": {
+    "path": "uuid.js",
+    "born": 1321090314000,
+    "died": 1362166594000,
+    "bornBy": "Mikeal Rogers",
+    "diedBy": "Mikeal Rogers",
+    "cause": "node-uuid is much better.",
+    "hash": "67d753fec99fa1f5a3b35ec0bbbc98896418d86c",
+    "lines": 20,
+    "commits": 5,
+    "authors": [
+     "alessioalex",
+     "Mikeal Rogers"
+    ]
+   }
+  }
+ ],
+ "stats": {
+  "people": 333,
+  "deaths": 50,
+  "blamedFiles": 0
+ }
+}

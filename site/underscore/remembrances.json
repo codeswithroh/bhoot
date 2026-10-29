@@ -1,0 +1,101 @@
+{
+ "495a129e5c08c5f9": {
+  "text": "From 2009, a list persisted, silently echoing through 143,985 lines of code, a testament to Jeremy’s steady hand. Five hundred seventy-six commits shaped its quiet, enduring existence.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "7cc185fd23fb1c81": {
+  "text": "Jordan Eldredge’s code, a quiet echo of 1,249 lines, still diligently tests for null within its functions and collections, born in 2015. Eight years silent, yet its persistence continues, a spectral testament to its work.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "1c209ac3daacf648": {
+  "text": "Graeme’s code, born in 2014, still measures time with a persistent echo. Eight hundred sixty-four lines, across sixteen files, continue its quiet work today.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Graeme’s code, born on January 21, 2014, still measures time with a persistent, quiet echo of 864 lines. It endures, a testament to 145 silent years within collections and tests.",
+    "why": "\"145 silent years\""
+   }
+  ]
+ },
+ "5b6789c041c4415c": {
+  "text": "Kevin Gibbons’s code, a quiet echo from 2015, still diligently tests seven files, particularly within the test/objects.js, ensuring it continues to verify its mapping functions.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "2487420050ed1b35": {
+  "text": "Adam Krebs’s code, silent for a decade, still diligently runs, a testament to 259 lines within twelve files, beginning with that 2013 fix. Its echoes persist, particularly in index.html.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b3d617c932abd204": {
+  "text": "Last seen 2014-10-22. 250 of their lines still run here.",
+  "by": "facts",
+  "rejected": [
+   {
+    "text": "Brad Dunbar’s code, a quiet echo of 2011, still compiles 250 lines within twelve files, most notably in index.html. Its spirit persists, a testament to 127 silent years.",
+    "why": "\"127 silent years\""
+   },
+   {
+    "text": "Brad Dunbar’s code, a quiet echo of 250 lines, still breathes within these files, a testament to 127 years of diligent work. It shapes index.html, a legacy of 2011 and 2014.",
+    "why": "\"127 years\""
+   }
+  ]
+ },
+ "b6a9c115ce3c8427": {
+  "text": "Michael Ficarra’s code, a quiet pulse of 246 lines, still echoes from 2011, a single array beginning to hold. Ten years silent, yet its legacy persists within test/objects.js.",
+  "by": "gemma-retry",
+  "rejected": [
+   {
+    "text": "Michael Ficarra’s code, a silent echo from 2011, still runs today, a small, persistent array of twenty-four-six lines. It began with a test, and endures.",
+    "why": "\"twenty-four-six lines\""
+   }
+  ]
+ },
+ "f7cd2db6d6e6a719": {
+  "text": "David Chambers’ code, born in 2012, still quietly executes, a persistent echo of 201 lines within seven files. His <tt>for</tt> loop endures, shaping the heart of index.html.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "311afd42a14760de": {
+  "text": "Justin Ridgewell’s code, a quiet 184 lines, still answers the system’s calls, born in 2014 and persisting through ten years. Its echoes reside in underscore-umd.js, a testament to careful work.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "3df15b889ead5c0e": {
+  "text": "John-David Dalton’s echoes persist, a quiet vigilance of 142 lines still dutifully alerting, born of 2011 and a silent decade. His code, a small, persistent soul, remains in CODE_OF_CONDUCT.md.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b895f3d739e747d1": {
+  "text": "Its echoes remain, a quiet pulse of 104 lines in test/objects.js, born of comparisons and a singular, persistent First. Kit Cambridge’s work persists, silent for fourteen years.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "b6da175e136f4015": {
+  "text": "Ognjen’s echoes persist, a quiet dance of 102 lines in test/functions.js, faithfully running since 2021 with its original now.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "6f85a30bb6a38ad6": {
+  "text": "Born in 2009, this code tested speed with jslitmus, adding 81 lines of tests in four years. Removed by Brad Dunbar in 2014, it sought to shed a jQuery dependency.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "7b5b03763739407a": {
+  "text": "Born in 2009, Underscore-min served faithfully for a year, guided by Jeremy Ashkenas and others. Removed in 2011, its purpose shifted to the gh-pages, leaving 50 commits behind.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "a8767776df7f12ce": {
+  "text": "Born in 2009, this utility-belt library of 20 lines offered functional support, a brief life of 13 commits, extinguished by Underscore.js 1.3.0 in January 2012.",
+  "by": "gemma",
+  "rejected": []
+ },
+ "62c64c4ccab6dcf5": {
+  "text": "Born swift in January, 2010, this small script, crafted by Jeremy Ashkenas, offered tests for number detection. It ceased to be in August, 2012, a fleeting twenty-seven lines and two commits, resting now among the code.",
+  "by": "gemma",
+  "rejected": []
+ }
+}

@@ -74,3 +74,8 @@ test('a month that matches a real date is fine; one that does not is caught', ()
   assert.equal(check('Born in June of 2014, it rests now.', contributing), null); // born 2014-06-04
   assert.ok(check('Born in July of 2014, it rests now.', contributing));
 });
+
+test('a possessive apostrophe is not a new name (found on the held-out repo)', () => {
+  const chambers: Facts = { ...tj, title: 'David Chambers', lines: ['name: David Chambers', 'first commit: 2012-10-04 ("x")', 'last commit: 2014-05-03 ("y")', 'lines still running today: 201'], counts: [[201, 'lines']], bornYear: 2012, goneYear: 2014, makers: ['david chambers'] };
+  assert.equal(check("David Chambers' code, born in 2012, still runs: 201 lines.", chambers), null);
+});
