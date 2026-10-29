@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhoot · dashboard</title>
+<link rel="icon" href="/ghost.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/app/app.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="side" id="side">
+    <a class="logo" href="/" aria-label="Bhoot home">
+      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true"><path d="M3 30V14C3 7 8 2 15 2s12 5 12 12v16l-4-3-4 3-4-3-4 3-4-3z" fill="#fff" stroke="#141414" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11" cy="14" r="2" fill="#141414"/><circle cx="19" cy="14" r="2" fill="#141414"/></svg>
+      <span>bh<i>oo</i>t</span>
+    </a>
+
+    <label class="switch">
+      <span class="sw-ava" id="swAva"></span>
+      <select id="repoSel" aria-label="Repository">
+        <option value="express">expressjs/express</option>
+        <option value="request">request/request</option>
+        <option value="underscore">jashkenas/underscore</option>
+      </select>
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5-5 5 5M7 14l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </label>
+
+    <p class="sec">Graveyard</p>
+    <nav class="nav" id="nav">
+      <a href="#overview" data-view="overview"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>Overview</a>
+      <a href="#ghosts" data-view="ghosts"><svg viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11l-2.5-2-2.5 2-2-2-2 2-2.5-2z"/><circle cx="9.5" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="10" r="1" fill="currentColor"/></svg>Ghosts<b id="nGhosts"></b></a>
+      <a href="#graves" data-view="graves"><svg viewBox="0 0 24 24"><path d="M5 21V10a7 7 0 0114 0v11z"/><path d="M12 8v7M9 11h6"/></svg>Graves<b id="nGraves"></b></a>
+      <a href="#timeline" data-view="timeline"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h16M4 18h7"/></svg>Timeline</a>
+      <a href="#checker" data-view="checker"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Checker<b id="nCaught" class="hot"></b></a>
+    </nav>
+
+    <p class="sec">Read graveyards</p>
+    <div class="repos" id="repos"></div>
+
+    <div class="help">
+      <div class="help-ico"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 17l6-6-6-6M12 19h8" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <b>Raise your own</b>
+      <span>Any repo, on your laptop</span>
+      <button class="mini" id="copyCmd">Copy command</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <button class="burger" id="burger" aria-label="Menu"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="crumb"><a href="/">Graveyards</a><span>/</span><b id="crumb"></b></div>
+      <div class="top-r">
+        <div class="stack" id="stack"></div>
+        <button class="icon-btn" id="lightAll" title="Light every candle" aria-label="Light every candle"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3c-2 3 0 4 0 6s-2 2-2 0c-1 2 0 4 2 4s3-2 2-4c0-2-2-3-2-6z" fill="#ffd34d" stroke="#141414" stroke-width="1.6"/><rect x="9" y="13" width="6" height="8" rx="1.5" fill="#fff" stroke="#141414" stroke-width="1.6"/></svg></button>
+        <a class="dark-btn" href="https://github.com/codeswithroh/bhoot"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Your repo</a>
+      </div>
+    </header>
+
+    <div class="view" id="view" aria-live="polite"></div>
+  </main>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" tabindex="-1"></aside>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script src="/app/app.js" type="module"></script>
+</body>
+</html>

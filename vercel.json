@@ -3,5 +3,8 @@
   "framework": null,
   "buildCommand": "",
   "outputDirectory": "site",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/:repo(express|request|underscore)", "destination": "/app?repo=:repo", "permanent": false }
+  ]
 }

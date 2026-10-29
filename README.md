@@ -7,14 +7,14 @@
 **In Hindi, *bhoot* means ghost. It also means the past.**<br>
 Bhoot reads your repository's git history, finds both, and writes them a remembrance that git can vouch for.
 
-[![Live graveyards](https://img.shields.io/badge/live-bhoot--graveyard.vercel.app-f5a524?style=flat-square)](https://bhoot-graveyard.vercel.app)
-[![Gemma 3 4B](https://img.shields.io/badge/model-Gemma%203%204B-2a2633?style=flat-square)](https://ollama.com/library/gemma3)
-[![Runs locally](https://img.shields.io/badge/runs-locally%2C%20via%20Ollama-2a2633?style=flat-square)](#faq)
-[![Tests](https://img.shields.io/badge/tests-node%20----test-2a2633?style=flat-square)](test/checker.test.ts)
-[![Node](https://img.shields.io/badge/node-%E2%89%A522.18-2a2633?style=flat-square)](package.json)
-[![License: MIT](https://img.shields.io/badge/license-MIT-2a2633?style=flat-square)](LICENSE)
+[![Live graveyards](https://raster.shields.io/badge/live-bhoot--graveyard.vercel.app-f5a524?style=flat-square)](https://bhoot-graveyard.vercel.app)
+[![Gemma 3 4B](https://raster.shields.io/badge/model-Gemma%203%204B-2a2633?style=flat-square)](https://ollama.com/library/gemma3)
+[![Runs locally](https://raster.shields.io/badge/runs-locally%2C%20via%20Ollama-2a2633?style=flat-square)](#faq)
+[![Tests](https://raster.shields.io/badge/tests-node%20----test-2a2633?style=flat-square)](test/checker.test.ts)
+[![Node](https://raster.shields.io/badge/node-%E2%89%A522.18-2a2633?style=flat-square)](package.json)
+[![License: MIT](https://raster.shields.io/badge/license-MIT-2a2633?style=flat-square)](LICENSE)
 
-[**Walk a graveyard**](https://bhoot-graveyard.vercel.app/express) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Numbers](#numbers) · [FAQ](#faq)
+[**Walk a graveyard**](https://bhoot-graveyard.vercel.app/app?repo=express) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Numbers](#numbers) · [FAQ](#faq)
 
 <img src="docs/demo.gif" alt="Walking the Express graveyard: the ghosts, lighting a candle, the tombstones, and a family plot" width="760">
 
@@ -55,9 +55,9 @@ Every old repository has ghosts like that: people who moved on but whose code di
 
 | Repository | What you'll find |
 |---|---|
-| [**expressjs/express**](https://bhoot-graveyard.vercel.app/express) | 12 ghosts and 30 graves from 6,183 commits. TJ Holowaychuk's 6,483 lines still run. |
-| [**request/request**](https://bhoot-graveyard.vercel.app/request) | The HTTP library half of npm leaned on. Its last commit, in 2020, fixed a typo in its own deprecation notice. |
-| [**jashkenas/underscore**](https://bhoot-graveyard.vercel.app/underscore) | Born 2009. Jeremy Ashkenas's oldest surviving line is a 2009 test fixture: `var list = [1, [2], [3, [[[4]]]]];` |
+| [**expressjs/express**](https://bhoot-graveyard.vercel.app/app?repo=express) | 12 ghosts and 30 graves from 6,183 commits. TJ Holowaychuk's 6,483 lines still run. |
+| [**request/request**](https://bhoot-graveyard.vercel.app/app?repo=request) | The HTTP library half of npm leaned on. Its last commit, in 2020, fixed a typo in its own deprecation notice. |
+| [**jashkenas/underscore**](https://bhoot-graveyard.vercel.app/app?repo=underscore) | Born 2009. Jeremy Ashkenas's oldest surviving line is a 2009 test fixture: `var list = [1, [2], [3, [[[4]]]]];` |
 
 ## Quick start
 
