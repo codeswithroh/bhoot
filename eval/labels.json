@@ -113,5 +113,34 @@
    "tests/test-proxy-auth-no-uri-auth.js": "\"eight tests\": 8 is commits",
    "seanstrom (retry)": "\"Sean Strom\": a full name invented from the username seanstrom"
   }
+ },
+ "jashkenas/underscore": {
+  "_split": "HELD OUT: run once with the checker frozen at commit e2f3d9a; labelled by hand afterwards.",
+  "first": {
+   "Jeremy Ashkenas": true,
+   "Jordan Eldredge": true,
+   "Graeme Yeates": false,
+   "Kevin Gibbons": true,
+   "Adam Krebs": true,
+   "Brad Dunbar": false,
+   "Michael Ficarra": false,
+   "David Chambers": true,
+   "Justin Ridgewell": true,
+   "John-David Dalton": true,
+   "Kit Cambridge": true,
+   "Ognjen Jevremovic": true,
+   "test/speed.js": true,
+   "underscore-min.js": true,
+   "README": true,
+   "test/temp.js": true
+  },
+  "retry": {
+   "Graeme Yeates": true,
+   "Michael Ficarra": true,
+   "David Chambers": true
+  },
+  "_notes": {
+   "David Chambers": "true, but the frozen checker rejected it: the possessive \"Chambers'\" (trailing apostrophe) wasn't stripped before the name lookup. Fixed after this run."
+  }
  }
 }

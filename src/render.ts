@@ -33,8 +33,13 @@ function ghost(s: Stone, repo: string) {
   </article>`;
 }
 
-function grave(s: Stone, repo: string) {
+function grave(s: Stone, repo: string, siblings: Stone[] = []) {
   const m = s.meta as Record<string, any>;
+  const family = siblings.length
+    ? `<details class="family"><summary>family plot · ${siblings.length} more laid to rest by the same commit</summary><ul>${siblings
+        .map((x) => `<li><code>${esc(x.meta.path)}</code> <span>${yr(Number(x.meta.born))} – ${yr(Number(x.meta.died))}</span></li>`)
+        .join('')}</ul></details>`
+    : '';
   const file = String(m.path);
   const base = file.split('/').pop();
   return `<article class="grave">
@@ -48,8 +53,29 @@ function grave(s: Stone, repo: string) {
       <p class="cause"><span>cause of death</span> <a href="https://github.com/${esc(repo)}/commit/${esc(m.hash)}" rel="noopener">“${esc(m.cause)}”</a></p>
       <p class="by">born to ${esc(m.bornBy)} · laid to rest by ${esc(m.diedBy)}</p>
       ${badge(s)}
+      ${family}
     </div>
   </article>`;
+}
+
+/** Files deleted together by one commit share a plot: one stone, the siblings listed under it. */
+function plots(graves: Stone[]): [Stone, Stone[]][] {
+  const byCommit = new Map<string, Stone[]>();
+  for (const g of graves) byCommit.set(String(g.meta.hash), [...(byCommit.get(String(g.meta.hash)) ?? []), g]);
+  const used = new Set<Stone>();
+  const out: [Stone, Stone[]][] = [];
+  for (const g of graves) {
+    if (used.has(g)) continue;
+    const group = byCommit.get(String(g.meta.hash))!;
+    if (group.length >= 3) {
+      out.push([group[0], group.slice(1)]);
+      group.forEach((x) => used.add(x));
+    } else {
+      out.push([g, []]);
+      used.add(g);
+    }
+  }
+  return out;
 }
 
 export function render(y: Graveyard): string {
@@ -112,6 +138,7 @@ blockquote{margin:12px 0;font:italic 500 20px/1.4 'Cormorant Garamond',serif;col
 .by{font-size:12px;color:var(--dim);margin:6px 0 10px}
 .badge{display:inline-block;font-size:11px;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1px solid rgba(245,165,36,.4);color:var(--marigold);cursor:help}
 .badge.facts{border-color:rgba(167,159,179,.4);color:var(--dim)}
+.family{margin-top:10px;text-align:left;font-size:12.5px;color:var(--dim)}.family summary{cursor:pointer;color:var(--marigold);text-align:center}.family ul{list-style:none;padding:0;margin:8px 0 0;max-height:220px;overflow:auto}.family li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-top:1px solid rgba(255,255,255,.06)}.family code{font-size:11.5px;overflow-wrap:anywhere}
 footer{margin-top:70px;color:var(--dim);font-size:14px;border-top:1px solid #2a2338;padding-top:20px}
 footer a{color:var(--marigold)}
 .marigolds{position:fixed;inset:auto 0 0 0;height:6px;background:repeating-linear-gradient(90deg,var(--marigold) 0 18px,var(--marigold2) 18px 36px);opacity:.75}
@@ -138,7 +165,7 @@ footer a{color:var(--marigold)}
 
 <h2>The departed</h2>
 <p>Files that were born, changed, and deleted. The cause of death is the commit that removed them.</p>
-<section class="graves">${y.graves.map((s) => grave(s, y.repo)).join('\n')}</section>
+<section class="graves">${plots(y.graves).map(([s, sib]) => grave(s, y.repo, sib)).join('\n')}</section>
 
 <footer>Made with <a href="https://github.com/codeswithroh/bhoot">Bhoot</a> from the history at ${esc(day(y.head))}. Hover a badge to see what was checked, or what was thrown out.</footer>
 </main>
