@@ -10,7 +10,7 @@ Bhoot reads your repository's git history, finds both, and writes them a remembr
 [![Live graveyards](https://img.shields.io/badge/live-bhoot--graveyard.vercel.app-f5a524?style=flat-square)](https://bhoot-graveyard.vercel.app)
 [![Gemma 3 4B](https://img.shields.io/badge/model-Gemma%203%204B-2a2633?style=flat-square)](https://ollama.com/library/gemma3)
 [![Runs locally](https://img.shields.io/badge/runs-locally%2C%20via%20Ollama-2a2633?style=flat-square)](#faq)
-[![Tests](https://img.shields.io/badge/tests-node%20--test-2a2633?style=flat-square)](test/checker.test.ts)
+[![Tests](https://img.shields.io/badge/tests-node%20----test-2a2633?style=flat-square)](test/checker.test.ts)
 [![Node](https://img.shields.io/badge/node-%E2%89%A522.18-2a2633?style=flat-square)](package.json)
 [![License: MIT](https://img.shields.io/badge/license-MIT-2a2633?style=flat-square)](LICENSE)
 
