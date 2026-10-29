@@ -1,0 +1,13 @@
+{
+  "name": "bhoot",
+  "version": "0.1.0",
+  "description": "The ghosts and graves of a git repository, remembered by a local Gemma and checked against git.",
+  "type": "module",
+  "bin": { "bhoot": "src/cli.ts" },
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "bhoot": "node src/cli.ts"
+  },
+  "license": "MIT"
+}

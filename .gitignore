@@ -1,0 +1,6 @@
+.repos
+node_modules
+.vercel
+.env*
+*.log
+site/*/remembrances.json.bak

@@ -1,0 +1,6 @@
+/.repos
+/src
+/test
+/eval
+/docs/*.html
+node_modules
